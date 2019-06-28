@@ -1028,10 +1028,16 @@
       "links": {},
       "address": "0xd9F5544A9d2A1c7C3357BD84d293983d95F82648",
       "transactionHash": "0x08cf102822a2b68793128ff54656ee483f5107c6fc49d11c56b3c9cf63143def"
+    },
+    "1561520007858": {
+      "events": {},
+      "links": {},
+      "address": "0x8a3b2749A6D0d77C7C5C7ACB4935DD77A4c71Ec1",
+      "transactionHash": "0x88c97dad55831b44e45810fdc6a7a3190294950b850a811bdc331ea40e5c55fb"
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-23T18:58:56.195Z",
+  "updatedAt": "2019-06-26T03:34:07.117Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

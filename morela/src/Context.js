@@ -5,7 +5,7 @@ const Provider = ({ drizzle, children }) => {
   const [drizzleState, setDrizzleState] = useState(null);
   const [initialized, setInitialized] = useState(false);
   useEffect(() => {
-    drizzle.store.subscribe(() => {
+    const drizzUnsub = drizzle.store.subscribe(() => {
       const drizzleState = drizzle.store.getState();
       if (drizzleState.drizzleStatus.initialized) {
         setInitialized(true);
@@ -14,7 +14,7 @@ const Provider = ({ drizzle, children }) => {
     });
 
     return () => {
-      drizzle.unsubscribe();
+      drizzUnsub();
     };
   }, [drizzle]);
   return (

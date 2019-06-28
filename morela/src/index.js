@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MyDrizzleApp from "./MyDrizzleApp";
 import * as serviceWorker from "./serviceWorker";
 import Provider from "./Provider";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes } from "./Routes";
 
 ReactDOM.render(
   <Provider>
-    <MyDrizzleApp />
+    <Router>
+      <Routes />
+    </Router>
   </Provider>,
   document.getElementById("root")
 );

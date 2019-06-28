@@ -2726,10 +2726,16 @@
       "links": {},
       "address": "0xbCAF2eB44faE808Da4E74003270d427Bfbe23C97",
       "transactionHash": "0xb842c2e0a542fb22fd4f70753302297c253d15086af6f7c3491337e439f3d468"
+    },
+    "1561520007858": {
+      "events": {},
+      "links": {},
+      "address": "0x29f977E10E35379cdfd28bbc4C3A0913a896F75e",
+      "transactionHash": "0x3d700376a133465db577878a6bcd0fcc5e8d85440b36865e60cc3d185ce6bd9a"
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-23T18:58:56.558Z",
+  "updatedAt": "2019-06-26T03:34:07.540Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {
