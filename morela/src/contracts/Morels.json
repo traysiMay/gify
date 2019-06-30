@@ -1034,10 +1034,22 @@
       "links": {},
       "address": "0x8a3b2749A6D0d77C7C5C7ACB4935DD77A4c71Ec1",
       "transactionHash": "0x88c97dad55831b44e45810fdc6a7a3190294950b850a811bdc331ea40e5c55fb"
+    },
+    "1561863724427": {
+      "events": {},
+      "links": {},
+      "address": "0xc3472D5E45Fb9351C63CA24E89283b2188f72c70",
+      "transactionHash": "0xcf9fcd08350c4f6aa262e97680aceff9a9bd2cfbdd491623e1f2cec137131cf9"
+    },
+    "1561868663507": {
+      "events": {},
+      "links": {},
+      "address": "0xC4a47BFAaFDaA05BcabcAbAC9a3e8b5F505E3bf6",
+      "transactionHash": "0x526e955f4080411007ae5c2da24deadbd25b54dd3a8454437da08198a20a0a54"
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-26T03:34:07.117Z",
+  "updatedAt": "2019-06-30T04:40:49.555Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

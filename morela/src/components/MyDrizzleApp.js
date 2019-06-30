@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import DrizzleContext from "./Context";
-import * as loadingAnimation from "./loading.json";
-import GifyLogo from "./GifyLogo";
+import DrizzleContext from "../state/Context";
+import * as loadingAnimation from "./animations/loading.json";
+import GifyLogo from "./svg/GifyLogo";
 import Lottie from "react-lottie";
 
 const animationOptions = {

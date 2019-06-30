@@ -2732,10 +2732,22 @@
       "links": {},
       "address": "0x29f977E10E35379cdfd28bbc4C3A0913a896F75e",
       "transactionHash": "0x3d700376a133465db577878a6bcd0fcc5e8d85440b36865e60cc3d185ce6bd9a"
+    },
+    "1561863724427": {
+      "events": {},
+      "links": {},
+      "address": "0xe60bdE682aC434073C49feaBd86F3B5cb80e1a9c",
+      "transactionHash": "0x98634e07acaf43d030ceda27081fa73362fa56a035ff750b18cbf01c3639eefe"
+    },
+    "1561868663507": {
+      "events": {},
+      "links": {},
+      "address": "0xb4A4874AF8B99503E435AF6Ac2Ea2773d535ed21",
+      "transactionHash": "0x808de7a4f3048479af18be3cd3a0d35b7707d10106dbb83887f5024ac0f9b512"
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-26T03:34:07.540Z",
+  "updatedAt": "2019-06-30T04:40:49.871Z",
   "devdoc": {
     "methods": {
       "approve(address,uint256)": {

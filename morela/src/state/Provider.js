@@ -1,7 +1,8 @@
 import React from "react";
 import { Drizzle, generateStore } from "drizzle";
 import Context from "./Context";
-import Morels from "./contracts/Morels.json";
+import Morels from "../contracts/Morels.json";
+
 const options = {
   contracts: [Morels],
   web3: {

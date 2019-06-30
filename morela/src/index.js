@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
-import Provider from "./Provider";
+import Provider from "./state/Provider";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Routes } from "./Routes";
+import Routes from "./routes";
 
 ReactDOM.render(
   <Provider>

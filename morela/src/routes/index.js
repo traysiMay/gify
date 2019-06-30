@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Route, Link } from "react-router-dom";
-import { Home } from "./Home";
-import MyDrizzleApp from "./MyDrizzleApp";
-export const Routes = () => {
+import { Home } from "../components/Home";
+import MyDrizzleApp from "../components/MyDrizzleApp";
+const Routes = () => {
   return (
     <Fragment>
       <Link to="/driz">driz</Link>
@@ -12,3 +12,4 @@ export const Routes = () => {
     </Fragment>
   );
 };
+export default Routes;
