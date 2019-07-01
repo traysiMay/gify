@@ -325,7 +325,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 85,
-        "sourceUnit": 934,
+        "sourceUnit": 948,
         "src": "27:63:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -339,10 +339,10 @@
               "id": 60,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 933,
+              "referencedDeclaration": 947,
               "src": "113:5:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$933",
+                "typeIdentifier": "t_contract$_ERC20_$947",
                 "typeString": "contract ERC20"
               }
             },
@@ -352,8 +352,8 @@
           }
         ],
         "contractDependencies": [
-          933,
-          1002
+          947,
+          1016
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -361,8 +361,8 @@
         "id": 84,
         "linearizedBaseContracts": [
           84,
-          933,
-          1002
+          947,
+          1016
         ],
         "name": "Morels",
         "nodeType": "ContractDefinition",
@@ -679,7 +679,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 85,
-        "sourceUnit": 934,
+        "sourceUnit": 948,
         "src": "27:63:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -693,10 +693,10 @@
               "id": 60,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 933,
+              "referencedDeclaration": 947,
               "src": "113:5:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$933",
+                "typeIdentifier": "t_contract$_ERC20_$947",
                 "typeString": "contract ERC20"
               }
             },
@@ -706,8 +706,8 @@
           }
         ],
         "contractDependencies": [
-          933,
-          1002
+          947,
+          1016
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -715,8 +715,8 @@
         "id": 84,
         "linearizedBaseContracts": [
           84,
-          933,
-          1002
+          947,
+          1016
         ],
         "name": "Morels",
         "nodeType": "ContractDefinition",
@@ -1011,45 +1011,15 @@
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
-    "1561088196899": {
+    "1561929017855": {
       "events": {},
       "links": {},
-      "address": "0xBACBF4A43c42C7E0f765308D6C75c1810d4829bE",
-      "transactionHash": "0xb442b7b83d9ad3bd5035907b2aeecde07c13c656185155eaf1e6d68e4bcf92e7"
-    },
-    "1561307274637": {
-      "events": {},
-      "links": {},
-      "address": "0x12F4E95a63Bfa9C375c52FB859a3377BB757bAe8",
-      "transactionHash": "0x029463c55fbfa03ccb0897ccc903d7e499fd74c70e11fed8f93f6718ebac5937"
-    },
-    "1561316288617": {
-      "events": {},
-      "links": {},
-      "address": "0xd9F5544A9d2A1c7C3357BD84d293983d95F82648",
-      "transactionHash": "0x08cf102822a2b68793128ff54656ee483f5107c6fc49d11c56b3c9cf63143def"
-    },
-    "1561520007858": {
-      "events": {},
-      "links": {},
-      "address": "0x8a3b2749A6D0d77C7C5C7ACB4935DD77A4c71Ec1",
-      "transactionHash": "0x88c97dad55831b44e45810fdc6a7a3190294950b850a811bdc331ea40e5c55fb"
-    },
-    "1561863724427": {
-      "events": {},
-      "links": {},
-      "address": "0xc3472D5E45Fb9351C63CA24E89283b2188f72c70",
-      "transactionHash": "0xcf9fcd08350c4f6aa262e97680aceff9a9bd2cfbdd491623e1f2cec137131cf9"
-    },
-    "1561868663507": {
-      "events": {},
-      "links": {},
-      "address": "0xC4a47BFAaFDaA05BcabcAbAC9a3e8b5F505E3bf6",
-      "transactionHash": "0x526e955f4080411007ae5c2da24deadbd25b54dd3a8454437da08198a20a0a54"
+      "address": "0xAf7f6815785239c79836b391b49310254a20d062",
+      "transactionHash": "0xd33327cd253c80eecdb43657eda816eae0ab8ffbef59180abcfb8a271d0e1975"
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-06-30T04:40:49.555Z",
+  "updatedAt": "2019-07-01T03:59:21.252Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

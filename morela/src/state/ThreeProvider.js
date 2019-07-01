@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import ThreeContext from "./ThreeContext";
 const THREE = window.THREE;
 const defaultCamera = new THREE.PerspectiveCamera(
   75,
@@ -6,8 +7,8 @@ const defaultCamera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-
-const Three = container => {
+const ThreeProvider = ({ children }) => {
+  const container = useRef();
   const [scene, setScene] = useState(new THREE.Scene());
   const [camera, setCamera] = useState(defaultCamera);
   const [renderer, setRenderer] = useState(new THREE.WebGLRenderer());
@@ -32,18 +33,23 @@ const Three = container => {
     };
     animate();
   };
-
-  return {
-    animator,
-    camera,
-    controls,
-    renderer,
-    scene,
-    setCamera,
-    setControls,
-    setRenderer,
-    setScene
-  };
+  return (
+    <ThreeContext.Provider
+      value={{
+        animator,
+        camera,
+        controls,
+        renderer,
+        scene,
+        setCamera,
+        setControls,
+        setRenderer,
+        setScene
+      }}
+    >
+      <div ref={container} />
+      {children}
+    </ThreeContext.Provider>
+  );
 };
-
-export default Three;
+export default ThreeProvider;

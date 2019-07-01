@@ -4,13 +4,16 @@ import * as serviceWorker from "./serviceWorker";
 import Provider from "./state/Provider";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
+import ThreeProvider from "./state/ThreeProvider";
 
 ReactDOM.render(
-  <Provider>
-    <Router>
-      <Routes />
-    </Router>
-  </Provider>,
+  <ThreeProvider>
+    <Provider>
+      <Router>
+        <Routes />
+      </Router>
+    </Provider>
+  </ThreeProvider>,
   document.getElementById("root")
 );
 

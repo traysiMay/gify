@@ -1,5 +1,5 @@
-const Shroom = artifacts.require("Transhroomtation");
+const Transhroomtation = artifacts.require("./Transhroomtation.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Shroom);
+  deployer.deploy(Transhroomtation);
 };
