@@ -1,11 +1,10 @@
 import React from "react";
 import { Drizzle, generateStore } from "drizzle";
 import Context from "./Context";
-import Morels from "../contracts/Morels.json";
 import Transhroomtation from "../contracts/Transhroomtation.json";
 
 const options = {
-  contracts: [Morels, Transhroomtation],
+  contracts: [Transhroomtation],
   web3: {
     fallback: {
       type: "ws",

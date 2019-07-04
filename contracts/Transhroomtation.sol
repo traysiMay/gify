@@ -32,4 +32,10 @@ contract Transhroomtation is ERC721, Ownable {
         return shrooms.length;
     }
 
+    function deathToMushrooms() public {
+        for (uint i = 0; i < shrooms.length ; i++ ) {
+            delete shrooms[i];
+        }
+    }
+
 }

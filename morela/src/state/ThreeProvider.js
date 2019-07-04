@@ -14,6 +14,7 @@ const ThreeProvider = ({ children }) => {
   const [renderer, setRenderer] = useState(new THREE.WebGLRenderer());
   const [controls, setControls] = useState(new THREE.OrbitControls(camera));
 
+  const objArray = [];
   let myReq;
   useEffect(() => {
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -39,6 +40,7 @@ const ThreeProvider = ({ children }) => {
         animator,
         camera,
         controls,
+        objArray,
         renderer,
         scene,
         setCamera,
@@ -47,7 +49,7 @@ const ThreeProvider = ({ children }) => {
         setScene
       }}
     >
-      <div ref={container} />
+      <div style={{ display: "block" }} ref={container} />
       {children}
     </ThreeContext.Provider>
   );

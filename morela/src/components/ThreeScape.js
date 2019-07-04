@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
-import Shrooms from "./Shrooms";
-import Three from "../utils/threeFunctions";
-import ThreeContext from "../state/ThreeContext";
+import React, { useEffect, useRef } from "react";
+
 const THREE = window.THREE;
-export const ThreeScape = () => {
-  const { scene } = useContext(ThreeContext);
-  return <div>wtff</div>;
+export const ThreeScape = ({ shroomArray }) => {
+  const sherm = useRef(0);
+  console.log(THREE);
+  useEffect(() => {
+    if (sherm.current.length === shroomArray.length) return;
+    sherm.current = shroomArray;
+    console.log(sherm.current);
+  }, [shroomArray]);
+  return <div />;
 };
 
 export default ThreeScape;

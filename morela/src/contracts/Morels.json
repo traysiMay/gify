@@ -325,7 +325,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 85,
-        "sourceUnit": 948,
+        "sourceUnit": 970,
         "src": "27:63:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -339,10 +339,10 @@
               "id": 60,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 947,
+              "referencedDeclaration": 969,
               "src": "113:5:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$947",
+                "typeIdentifier": "t_contract$_ERC20_$969",
                 "typeString": "contract ERC20"
               }
             },
@@ -352,8 +352,8 @@
           }
         ],
         "contractDependencies": [
-          947,
-          1016
+          969,
+          1038
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -361,8 +361,8 @@
         "id": 84,
         "linearizedBaseContracts": [
           84,
-          947,
-          1016
+          969,
+          1038
         ],
         "name": "Morels",
         "nodeType": "ContractDefinition",
@@ -679,7 +679,7 @@
         "id": 59,
         "nodeType": "ImportDirective",
         "scope": 85,
-        "sourceUnit": 948,
+        "sourceUnit": 970,
         "src": "27:63:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -693,10 +693,10 @@
               "id": 60,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 947,
+              "referencedDeclaration": 969,
               "src": "113:5:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$947",
+                "typeIdentifier": "t_contract$_ERC20_$969",
                 "typeString": "contract ERC20"
               }
             },
@@ -706,8 +706,8 @@
           }
         ],
         "contractDependencies": [
-          947,
-          1016
+          969,
+          1038
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -715,8 +715,8 @@
         "id": 84,
         "linearizedBaseContracts": [
           84,
-          947,
-          1016
+          969,
+          1038
         ],
         "name": "Morels",
         "nodeType": "ContractDefinition",
@@ -1016,10 +1016,16 @@
       "links": {},
       "address": "0xAf7f6815785239c79836b391b49310254a20d062",
       "transactionHash": "0xd33327cd253c80eecdb43657eda816eae0ab8ffbef59180abcfb8a271d0e1975"
+    },
+    "1562028267748": {
+      "events": {},
+      "links": {},
+      "address": "0xcdF77fAfCE0025C5190Fd210906C7d2ABa5dabF5",
+      "transactionHash": "0x1253bd904b13b1f6dfb5f202cae368aac32066093211928ee964f81070373919"
     }
   },
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-07-01T03:59:21.252Z",
+  "updatedAt": "2019-07-02T04:29:17.971Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
