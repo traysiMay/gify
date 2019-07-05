@@ -14,7 +14,16 @@ const ThreeProvider = ({ children }) => {
   const [renderer, setRenderer] = useState(new THREE.WebGLRenderer());
   const [controls, setControls] = useState(new THREE.OrbitControls(camera));
 
-  const objArray = [];
+  // create an object array for the animation that can be appended to
+
+  // the animation behaviors can just be instantianted once from the component
+
+  // or maybe I just define all of the animations in here and call them from the component to be triggered
+  const objArray = useRef([]);
+  const updateObjArray = () => {
+    return objArray;
+  };
+
   let myReq;
   useEffect(() => {
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -29,7 +38,8 @@ const ThreeProvider = ({ children }) => {
     const animate = () => {
       myReq = requestAnimationFrame(animate);
       if (controls) controls.update();
-      innerFunction();
+      const objs = updateObjArray();
+      innerFunction(objs);
       renderer.render(scene, camera);
     };
     animate();

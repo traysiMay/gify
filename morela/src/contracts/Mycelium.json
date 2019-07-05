@@ -17,15 +17,15 @@
       "type": "constructor"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"name\":\"_wallet\",\"type\":\"address\"},{\"name\":\"_token\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/ariel/morels/contracts/Mycelium.sol\":\"Mycelium\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/ariel/morels/contracts/Morels.sol\":{\"keccak256\":\"0x0635262cabd95478242180106388a0c6fc5129a5a077a6bbce6796b3ce1d807a\",\"urls\":[\"bzzr://2b450910c6a433de90f069a624c21d6cb4b9e77becddfc1ea2dcabb40a8fa5ea\"]},\"/C/Users/ariel/morels/contracts/Mycelium.sol\":{\"keccak256\":\"0x2df3e55c4a2a410db9dacf61f5d47e924c49161b250a6f9777df819b992a5db9\",\"urls\":[\"bzzr://c479db5531997802bc08cd457ca57e869fe20ef87a8e2e3225f6d13d6533696b\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzzr://1604f5b6d6e916c154efd8c6720cda069e5ba32dfa0a9dedf2b42e5b02d07f89\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x852793a3c2f86d336a683b30d688ec3dcfc57451af5a2bf5975cda3b7191a901\",\"urls\":[\"bzzr://07fb42206812a17c1f71e548cfa5cec6f9aa1ae0ca5df870718ca4aa9759d1a5\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x90e8c2521653bbb1768b05889c5760031e688d9cd361f167489b89215e201b95\",\"urls\":[\"bzzr://aa8b45b57edafc3d67bc5d916327ea16807fae33f753ca163ae0c4061b789766\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50604051604080608c83398101806040526040811015602d57600080fd5b810190808051906020019092919080519060200190929190505050505060358060576000396000f3fe6080604052600080fdfea165627a7a72305820aa93bfad43289ce3a20749254b6b384dafee03895f890cfd9de3f76ea01f3b000029",
-  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820aa93bfad43289ce3a20749254b6b384dafee03895f890cfd9de3f76ea01f3b000029",
-  "sourceMap": "53:84:2:-;;;74:60;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:60:2;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;74:60:2;;;;;;;;;;;;;;;;;;;;;;;;;;;53:84;;;;;;",
-  "deployedSourceMap": "53:84:2:-;;;;;",
-  "source": "pragma solidity ^0.5.8;\r\n\r\nimport './Morels.sol';\r\n\r\ncontract Mycelium {\r\nconstructor(address _wallet, ERC20 _token) public {\r\n    \r\n}\r\n}",
-  "sourcePath": "C:/Users/ariel/morels/contracts/Mycelium.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"name\":\"_wallet\",\"type\":\"address\"},{\"name\":\"_token\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ariel.klevecz/gify/contracts/Mycelium.sol\":\"Mycelium\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ariel.klevecz/gify/contracts/Morels.sol\":{\"keccak256\":\"0xfe4e51d40c53e61e51390965879d90e1a7a89e7dda18645a8c05c72924450345\",\"urls\":[\"bzzr://958732df19204be73a63a3867429b53d8c10220f16b07f831754936a1eb0ea1e\"]},\"/Users/ariel.klevecz/gify/contracts/Mycelium.sol\":{\"keccak256\":\"0xb79e9d7795a2bd2c22f708b0254b08050d4ddd0065b9c241b5b325418259470b\",\"urls\":[\"bzzr://e0010a62246e3a4308f3ea5ccc187eda804649031a62f382ca698708a246fa83\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzzr://1604f5b6d6e916c154efd8c6720cda069e5ba32dfa0a9dedf2b42e5b02d07f89\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x852793a3c2f86d336a683b30d688ec3dcfc57451af5a2bf5975cda3b7191a901\",\"urls\":[\"bzzr://07fb42206812a17c1f71e548cfa5cec6f9aa1ae0ca5df870718ca4aa9759d1a5\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x90e8c2521653bbb1768b05889c5760031e688d9cd361f167489b89215e201b95\",\"urls\":[\"bzzr://aa8b45b57edafc3d67bc5d916327ea16807fae33f753ca163ae0c4061b789766\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604051604080608c83398101806040526040811015602d57600080fd5b810190808051906020019092919080519060200190929190505050505060358060576000396000f3fe6080604052600080fdfea165627a7a723058201286a89161596e10ea30fde334c5d9768af09472769825bb993052772344a1c10029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058201286a89161596e10ea30fde334c5d9768af09472769825bb993052772344a1c10029",
+  "sourceMap": "49:80:2:-;;;69:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:58:2;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;69:58:2;;;;;;;;;;;;;;;;;;;;;;;;;;;49:80;;;;;;",
+  "deployedSourceMap": "49:80:2:-;;;;;",
+  "source": "pragma solidity ^0.5.8;\n\nimport './Morels.sol';\n\ncontract Mycelium {\nconstructor(address _wallet, ERC20 _token) public {\n    \n}\n}",
+  "sourcePath": "/Users/ariel.klevecz/gify/contracts/Mycelium.sol",
   "ast": {
-    "absolutePath": "/C/Users/ariel/morels/contracts/Mycelium.sol",
+    "absolutePath": "/Users/ariel.klevecz/gify/contracts/Mycelium.sol",
     "exportedSymbols": {
       "Mycelium": [
         96
@@ -46,13 +46,13 @@
         "src": "0:23:2"
       },
       {
-        "absolutePath": "/C/Users/ariel/morels/contracts/Morels.sol",
+        "absolutePath": "/Users/ariel.klevecz/gify/contracts/Morels.sol",
         "file": "./Morels.sol",
         "id": 87,
         "nodeType": "ImportDirective",
         "scope": 97,
         "sourceUnit": 85,
-        "src": "27:22:2",
+        "src": "25:22:2",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -73,7 +73,7 @@
             "body": {
               "id": 94,
               "nodeType": "Block",
-              "src": "124:10:2",
+              "src": "119:8:2",
               "statements": []
             },
             "documentation": null,
@@ -93,7 +93,7 @@
                   "name": "_wallet",
                   "nodeType": "VariableDeclaration",
                   "scope": 95,
-                  "src": "86:15:2",
+                  "src": "81:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -104,7 +104,7 @@
                     "id": 88,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "86:7:2",
+                    "src": "81:7:2",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -120,11 +120,11 @@
                   "name": "_token",
                   "nodeType": "VariableDeclaration",
                   "scope": 95,
-                  "src": "103:12:2",
+                  "src": "98:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC20_$921",
+                    "typeIdentifier": "t_contract$_ERC20_$969",
                     "typeString": "contract ERC20"
                   },
                   "typeName": {
@@ -132,10 +132,10 @@
                     "id": 90,
                     "name": "ERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 921,
-                    "src": "103:5:2",
+                    "referencedDeclaration": 969,
+                    "src": "98:5:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$921",
+                      "typeIdentifier": "t_contract$_ERC20_$969",
                       "typeString": "contract ERC20"
                     }
                   },
@@ -143,29 +143,29 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "85:31:2"
+              "src": "80:31:2"
             },
             "returnParameters": {
               "id": 93,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "124:0:2"
+              "src": "119:0:2"
             },
             "scope": 96,
-            "src": "74:60:2",
+            "src": "69:58:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 97,
-        "src": "53:84:2"
+        "src": "49:80:2"
       }
     ],
-    "src": "0:137:2"
+    "src": "0:129:2"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/ariel/morels/contracts/Mycelium.sol",
+    "absolutePath": "/Users/ariel.klevecz/gify/contracts/Mycelium.sol",
     "exportedSymbols": {
       "Mycelium": [
         96
@@ -186,13 +186,13 @@
         "src": "0:23:2"
       },
       {
-        "absolutePath": "/C/Users/ariel/morels/contracts/Morels.sol",
+        "absolutePath": "/Users/ariel.klevecz/gify/contracts/Morels.sol",
         "file": "./Morels.sol",
         "id": 87,
         "nodeType": "ImportDirective",
         "scope": 97,
         "sourceUnit": 85,
-        "src": "27:22:2",
+        "src": "25:22:2",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -213,7 +213,7 @@
             "body": {
               "id": 94,
               "nodeType": "Block",
-              "src": "124:10:2",
+              "src": "119:8:2",
               "statements": []
             },
             "documentation": null,
@@ -233,7 +233,7 @@
                   "name": "_wallet",
                   "nodeType": "VariableDeclaration",
                   "scope": 95,
-                  "src": "86:15:2",
+                  "src": "81:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -244,7 +244,7 @@
                     "id": 88,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "86:7:2",
+                    "src": "81:7:2",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -260,11 +260,11 @@
                   "name": "_token",
                   "nodeType": "VariableDeclaration",
                   "scope": 95,
-                  "src": "103:12:2",
+                  "src": "98:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC20_$921",
+                    "typeIdentifier": "t_contract$_ERC20_$969",
                     "typeString": "contract ERC20"
                   },
                   "typeName": {
@@ -272,10 +272,10 @@
                     "id": 90,
                     "name": "ERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 921,
-                    "src": "103:5:2",
+                    "referencedDeclaration": 969,
+                    "src": "98:5:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$921",
+                      "typeIdentifier": "t_contract$_ERC20_$969",
                       "typeString": "contract ERC20"
                     }
                   },
@@ -283,26 +283,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "85:31:2"
+              "src": "80:31:2"
             },
             "returnParameters": {
               "id": 93,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "124:0:2"
+              "src": "119:0:2"
             },
             "scope": 96,
-            "src": "74:60:2",
+            "src": "69:58:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 97,
-        "src": "53:84:2"
+        "src": "49:80:2"
       }
     ],
-    "src": "0:137:2"
+    "src": "0:129:2"
   },
   "compiler": {
     "name": "solc",
@@ -320,10 +320,16 @@
       "links": {},
       "address": "0xb4Bb0bE806Fc7A1C3a93edB90Ae95245E1c5f053",
       "transactionHash": "0x48e50d9ea83d781ffda3e423ee82365fb7069151e2366e3e8d5c952de8f9f0e2"
+    },
+    "1562336496821": {
+      "events": {},
+      "links": {},
+      "address": "0x6364f238C91144F27fF0849461197f0b25E38965",
+      "transactionHash": "0x3afe210b5591b432d8e670c6d834f6020fb915d97631ba6aa89b28734418c390"
     }
   },
-  "schemaVersion": "3.0.10",
-  "updatedAt": "2019-07-02T04:29:17.976Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-05T14:23:27.732Z",
   "devdoc": {
     "methods": {}
   },
