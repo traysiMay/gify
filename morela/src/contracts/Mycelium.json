@@ -2,40 +2,118 @@
   "contractName": "Mycelium",
   "abi": [
     {
-      "inputs": [
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
         {
-          "name": "_wallet",
-          "type": "address"
-        },
-        {
-          "name": "_token",
+          "name": "",
           "type": "address"
         }
       ],
       "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
       "stateMutability": "nonpayable",
       "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint8"
+        }
+      ],
+      "name": "getHyphae",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"name\":\"_wallet\",\"type\":\"address\"},{\"name\":\"_token\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ariel.klevecz/gify/contracts/Mycelium.sol\":\"Mycelium\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ariel.klevecz/gify/contracts/Morels.sol\":{\"keccak256\":\"0xfe4e51d40c53e61e51390965879d90e1a7a89e7dda18645a8c05c72924450345\",\"urls\":[\"bzzr://958732df19204be73a63a3867429b53d8c10220f16b07f831754936a1eb0ea1e\"]},\"/Users/ariel.klevecz/gify/contracts/Mycelium.sol\":{\"keccak256\":\"0xb79e9d7795a2bd2c22f708b0254b08050d4ddd0065b9c241b5b325418259470b\",\"urls\":[\"bzzr://e0010a62246e3a4308f3ea5ccc187eda804649031a62f382ca698708a246fa83\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4ccf2d7b51873db1ccfd54ca2adae5eac3b184f9699911ed4490438419f1c690\",\"urls\":[\"bzzr://1604f5b6d6e916c154efd8c6720cda069e5ba32dfa0a9dedf2b42e5b02d07f89\"]},\"openzeppelin-solidity/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x852793a3c2f86d336a683b30d688ec3dcfc57451af5a2bf5975cda3b7191a901\",\"urls\":[\"bzzr://07fb42206812a17c1f71e548cfa5cec6f9aa1ae0ca5df870718ca4aa9759d1a5\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x90e8c2521653bbb1768b05889c5760031e688d9cd361f167489b89215e201b95\",\"urls\":[\"bzzr://aa8b45b57edafc3d67bc5d916327ea16807fae33f753ca163ae0c4061b789766\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50604051604080608c83398101806040526040811015602d57600080fd5b810190808051906020019092919080519060200190929190505050505060358060576000396000f3fe6080604052600080fdfea165627a7a723058201286a89161596e10ea30fde334c5d9768af09472769825bb993052772344a1c10029",
-  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058201286a89161596e10ea30fde334c5d9768af09472769825bb993052772344a1c10029",
-  "sourceMap": "49:80:2:-;;;69:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:58:2;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;69:58:2;;;;;;;;;;;;;;;;;;;;;;;;;;;49:80;;;;;;",
-  "deployedSourceMap": "49:80:2:-;;;;;",
-  "source": "pragma solidity ^0.5.8;\n\nimport './Morels.sol';\n\ncontract Mycelium {\nconstructor(address _wallet, ERC20 _token) public {\n    \n}\n}",
-  "sourcePath": "/Users/ariel.klevecz/gify/contracts/Mycelium.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"index\",\"type\":\"uint8\"}],\"name\":\"getHyphae\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/ariel/morels/contracts/Mycelium.sol\":\"Mycelium\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/ariel/morels/contracts/Hyphae.sol\":{\"keccak256\":\"0x6a508ed85b68ab042ac23bff7c8c4cb62e76e9b5060f46dbb675b0970d5cb4ea\",\"urls\":[\"bzzr://d3c65b7535252f62e7fce4da9d609a874b338550df8663cc1485a72cd95c6c83\"]},\"/C/Users/ariel/morels/contracts/Mycelium.sol\":{\"keccak256\":\"0xe17fd6c7cdf6167a39b02182542c0826db202b69b3cf9c6795a855fcf1b9a4d8\",\"urls\":[\"bzzr://938689539c59af09237af73618b42bc2c256c1199b43fcfd0bbf17ee124878d6\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzzr://d12a11272051eb6586de8f7e0a82c04a98c9984ce8b2a6cf1ee439f65aba29a9\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a36040516100d9906101a7565b8080602001828103825260078152602001807f67656e6573697300000000000000000000000000000000000000000000000000815250602001915050604051809103906000f080158015610131573d6000803e3d6000fd5b50600160008060ff16815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600260006101000a81548160ff021916908360ff1602179055506101b4565b61094f8061076283390190565b61059f806101c36000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063715018a61461005c5780638da5cb5b146100665780638f32d59b146100b0578063f2fde38b146100d2578063f367ffc414610116575b600080fd5b610064610187565b005b61006e6102c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100b86102e9565b604051808215151515815260200191505060405180910390f35b610114600480360360208110156100e857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610340565b005b6101456004803603602081101561012c57600080fd5b81019080803560ff1690602001909291905050506103c6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61018f6102e9565b610201576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6103486102e9565b6103ba576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6103c381610409565b50565b6000600160008360ff1660ff16815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561048f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602681526020018061054e6026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a72305820576fdb392f0b457b99ee06bd25cb1787019ec110d261d4a0d6945441f23767720029608060405234801561001057600080fd5b5060405161094f38038061094f8339810180604052602081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b5050929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806001908051906020019061015892919061015f565b5050610204565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101a057805160ff19168380011785556101ce565b828001600101855582156101ce579182015b828111156101cd5782518255916020019190600101906101b2565b5b5090506101db91906101df565b5090565b61020191905b808211156101fd5760008160009055506001016101e5565b5090565b90565b61073c806102136000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806317d7de7c14610067578063715018a6146100ea5780638da5cb5b146100f45780638f32d59b1461013e578063d28d885214610160578063f2fde38b146101e3575b600080fd5b61006f610227565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100f26102c9565b005b6100fc610402565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61014661042b565b604051808215151515815260200191505060405180910390f35b610168610482565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101a857808201518184015260208101905061018d565b50505050905090810190601f1680156101d55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610225600480360360208110156101f957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610520565b005b606060018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102bf5780601f10610294576101008083540402835291602001916102bf565b820191906000526020600020905b8154815290600101906020018083116102a257829003601f168201915b5050505050905090565b6102d161042b565b610343576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105185780601f106104ed57610100808354040283529160200191610518565b820191906000526020600020905b8154815290600101906020018083116104fb57829003601f168201915b505050505081565b61052861042b565b61059a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6105a3816105a6565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561062c576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806106eb6026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a7230582025c5c84d0d939d159033f51dc4fe3814432dcf6c8ead304e068a2e5dac3d91770029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063715018a61461005c5780638da5cb5b146100665780638f32d59b146100b0578063f2fde38b146100d2578063f367ffc414610116575b600080fd5b610064610187565b005b61006e6102c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100b86102e9565b604051808215151515815260200191505060405180910390f35b610114600480360360208110156100e857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610340565b005b6101456004803603602081101561012c57600080fd5b81019080803560ff1690602001909291905050506103c6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61018f6102e9565b610201576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6103486102e9565b6103ba576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6103c381610409565b50565b6000600160008360ff1660ff16815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561048f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602681526020018061054e6026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a72305820576fdb392f0b457b99ee06bd25cb1787019ec110d261d4a0d6945441f23767720029",
+  "sourceMap": "116:465:3:-;;;234:101;8:9:-1;5:2;;;30:1;27;20:12;5:2;234:101:3;666:10:9;657:6;;:19;;;;;;;;;;;;;;;;;;724:6;;;;;;;;;;;691:40;;720:1;691:40;;;;;;;;;;;;280:21:3;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;280:21:3;266:8;:11;275:1;266:11;;;;;;;;;;;;;;:35;;;;;;;;;;;;;;;;;;326:1;313:10;;:14;;;;;;;;;;;;;;;;;;116:465;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "116:465:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;116:465:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1599:137:9;;;:::i;:::-;;814:77;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1165:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1885:107;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1885:107:9;;;;;;;;;;;;;;;;;;;:::i;:::-;;474:102:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;474:102:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1599:137:9;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1697:1;1660:40;;1681:6;;;;;;;;;;;1660:40;;;;;;;;;;;;1727:1;1710:6;;:19;;;;;;;;;;;;;;;;;;1599:137::o;814:77::-;852:7;878:6;;;;;;;;;;;871:13;;814:77;:::o;1165:90::-;1205:4;1242:6;;;;;;;;;;;1228:20;;:10;:20;;;1221:27;;1165:90;:::o;1885:107::-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1957:28;1976:8;1957:18;:28::i;:::-;1885:107;:::o;474:102:3:-;527:6;553:8;:15;562:5;553:15;;;;;;;;;;;;;;;;;;;;;;;;;546:22;;474:102;;;:::o;2093:225:9:-;2186:1;2166:22;;:8;:22;;;;2158:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2275:8;2246:38;;2267:6;;;;;;;;;;;2246:38;;;;;;;;;;;;2303:8;2294:6;;:17;;;;;;;;;;;;;;;;;;2093:225;:::o",
+  "source": "pragma solidity ^0.5.8;\r\nimport 'openzeppelin-solidity/contracts/ownership/Ownable.sol';\r\nimport './Hyphae.sol';\r\n\r\ncontract Mycelium is Ownable{\r\n\r\n    mapping(uint8 => Hyphae) private _hyphaes;\r\n    uint8 private lastHyphae;\r\n\r\n    constructor() public {\r\n        _hyphaes[0] = new Hyphae('genesis'); \r\n        lastHyphae = 0;\r\n    }\r\n\r\n    function newHyphae(uint8 index, string memory name) private onlyOwner {\r\n        _hyphaes[index] = new Hyphae(name);\r\n    }\r\n\r\n    function getHyphae(uint8 index) public view returns (Hyphae) {\r\n        return _hyphaes[index];\r\n    }\r\n\r\n}",
+  "sourcePath": "C:/Users/ariel/morels/contracts/Mycelium.sol",
   "ast": {
-    "absolutePath": "/Users/ariel.klevecz/gify/contracts/Mycelium.sol",
+    "absolutePath": "/C/Users/ariel/morels/contracts/Mycelium.sol",
     "exportedSymbols": {
       "Mycelium": [
-        96
+        173
       ]
     },
-    "id": 97,
+    "id": 174,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 86,
+        "id": 114,
         "literals": [
           "solidity",
           "^",
@@ -43,72 +121,537 @@
           ".8"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:2"
+        "src": "0:23:3"
       },
       {
-        "absolutePath": "/Users/ariel.klevecz/gify/contracts/Morels.sol",
-        "file": "./Morels.sol",
-        "id": 87,
+        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 115,
         "nodeType": "ImportDirective",
-        "scope": 97,
-        "sourceUnit": 85,
-        "src": "25:22:2",
+        "scope": 174,
+        "sourceUnit": 650,
+        "src": "25:63:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "baseContracts": [],
-        "contractDependencies": [],
+        "absolutePath": "/C/Users/ariel/morels/contracts/Hyphae.sol",
+        "file": "./Hyphae.sol",
+        "id": 116,
+        "nodeType": "ImportDirective",
+        "scope": 174,
+        "sourceUnit": 28,
+        "src": "90:22:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 117,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 649,
+              "src": "137:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$649",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 118,
+            "nodeType": "InheritanceSpecifier",
+            "src": "137:7:3"
+          }
+        ],
+        "contractDependencies": [
+          27,
+          649
+        ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 96,
+        "id": 173,
         "linearizedBaseContracts": [
-          96
+          173,
+          649
         ],
         "name": "Mycelium",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 122,
+            "name": "_hyphaes",
+            "nodeType": "VariableDeclaration",
+            "scope": 173,
+            "src": "153:41:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+              "typeString": "mapping(uint8 => contract Hyphae)"
+            },
+            "typeName": {
+              "id": 121,
+              "keyType": {
+                "id": 119,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "161:5:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "153:24:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                "typeString": "mapping(uint8 => contract Hyphae)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 120,
+                "name": "Hyphae",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 27,
+                "src": "170:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_Hyphae_$27",
+                  "typeString": "contract Hyphae"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 124,
+            "name": "lastHyphae",
+            "nodeType": "VariableDeclaration",
+            "scope": 173,
+            "src": "201:24:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 123,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "201:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
             "body": {
-              "id": 94,
+              "id": 140,
               "nodeType": "Block",
-              "src": "119:8:2",
-              "statements": []
+              "src": "255:80:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 134,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 127,
+                        "name": "_hyphaes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 122,
+                        "src": "266:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                          "typeString": "mapping(uint8 => contract Hyphae)"
+                        }
+                      },
+                      "id": 129,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 128,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "275:1:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "266:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "67656e65736973",
+                          "id": 132,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "291:9:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_11f1efd0825aa3c737ce7a3831438f918cc83545afbed69e69fddee7e6fd5811",
+                            "typeString": "literal_string \"genesis\""
+                          },
+                          "value": "genesis"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_11f1efd0825aa3c737ce7a3831438f918cc83545afbed69e69fddee7e6fd5811",
+                            "typeString": "literal_string \"genesis\""
+                          }
+                        ],
+                        "id": 131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "280:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$returns$_t_contract$_Hyphae_$27_$",
+                          "typeString": "function (string memory) returns (contract Hyphae)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 130,
+                          "name": "Hyphae",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 27,
+                          "src": "284:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Hyphae_$27",
+                            "typeString": "contract Hyphae"
+                          }
+                        }
+                      },
+                      "id": 133,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "280:21:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "src": "266:35:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "id": 135,
+                  "nodeType": "ExpressionStatement",
+                  "src": "266:35:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 136,
+                      "name": "lastHyphae",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "313:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 137,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "326:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "313:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "313:14:3"
+                }
+              ]
             },
             "documentation": null,
-            "id": 95,
+            "id": 141,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 92,
+              "id": 125,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "245:2:3"
+            },
+            "returnParameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:0:3"
+            },
+            "scope": 173,
+            "src": "234:101:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 159,
+              "nodeType": "Block",
+              "src": "413:53:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 157,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 150,
+                        "name": "_hyphaes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 122,
+                        "src": "424:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                          "typeString": "mapping(uint8 => contract Hyphae)"
+                        }
+                      },
+                      "id": 152,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 151,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 143,
+                        "src": "433:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "424:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 155,
+                          "name": "name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 145,
+                          "src": "453:4:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 154,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "442:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$returns$_t_contract$_Hyphae_$27_$",
+                          "typeString": "function (string memory) returns (contract Hyphae)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 153,
+                          "name": "Hyphae",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 27,
+                          "src": "446:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Hyphae_$27",
+                            "typeString": "contract Hyphae"
+                          }
+                        }
+                      },
+                      "id": 156,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "442:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "src": "424:34:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "id": 158,
+                  "nodeType": "ExpressionStatement",
+                  "src": "424:34:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 160,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 148,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 147,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 582,
+                  "src": "403:9:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "403:9:3"
+              }
+            ],
+            "name": "newHyphae",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 146,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 89,
-                  "name": "_wallet",
+                  "id": 143,
+                  "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 95,
-                  "src": "81:15:2",
+                  "scope": 160,
+                  "src": "362:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 88,
-                    "name": "address",
+                    "id": 142,
+                    "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "81:7:2",
-                    "stateMutability": "nonpayable",
+                    "src": "362:5:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
                     }
                   },
                   "value": null,
@@ -116,66 +659,199 @@
                 },
                 {
                   "constant": false,
-                  "id": 91,
-                  "name": "_token",
+                  "id": 145,
+                  "name": "name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 95,
-                  "src": "98:12:2",
+                  "scope": 160,
+                  "src": "375:18:3",
                   "stateVariable": false,
-                  "storageLocation": "default",
+                  "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC20_$969",
-                    "typeString": "contract ERC20"
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
                   },
                   "typeName": {
-                    "contractScope": null,
-                    "id": 90,
-                    "name": "ERC20",
-                    "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 969,
-                    "src": "98:5:2",
+                    "id": 144,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:6:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$969",
-                      "typeString": "contract ERC20"
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "80:31:2"
+              "src": "361:33:3"
             },
             "returnParameters": {
-              "id": 93,
+              "id": 149,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "119:0:2"
+              "src": "413:0:3"
             },
-            "scope": 96,
-            "src": "69:58:2",
+            "scope": 173,
+            "src": "343:123:3",
             "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 171,
+              "nodeType": "Block",
+              "src": "535:41:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 167,
+                      "name": "_hyphaes",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 122,
+                      "src": "553:8:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                        "typeString": "mapping(uint8 => contract Hyphae)"
+                      }
+                    },
+                    "id": 169,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 168,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 162,
+                      "src": "562:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "553:15:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "functionReturnParameters": 166,
+                  "id": 170,
+                  "nodeType": "Return",
+                  "src": "546:22:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 172,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHyphae",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 162,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "493:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 161,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:13:3"
+            },
+            "returnParameters": {
+              "id": 166,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 165,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "527:6:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Hyphae_$27",
+                    "typeString": "contract Hyphae"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 164,
+                    "name": "Hyphae",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 27,
+                    "src": "527:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "526:8:3"
+            },
+            "scope": 173,
+            "src": "474:102:3",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 97,
-        "src": "49:80:2"
+        "scope": 174,
+        "src": "116:465:3"
       }
     ],
-    "src": "0:129:2"
+    "src": "0:581:3"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ariel.klevecz/gify/contracts/Mycelium.sol",
+    "absolutePath": "/C/Users/ariel/morels/contracts/Mycelium.sol",
     "exportedSymbols": {
       "Mycelium": [
-        96
+        173
       ]
     },
-    "id": 97,
+    "id": 174,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 86,
+        "id": 114,
         "literals": [
           "solidity",
           "^",
@@ -183,72 +859,537 @@
           ".8"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:2"
+        "src": "0:23:3"
       },
       {
-        "absolutePath": "/Users/ariel.klevecz/gify/contracts/Morels.sol",
-        "file": "./Morels.sol",
-        "id": 87,
+        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 115,
         "nodeType": "ImportDirective",
-        "scope": 97,
-        "sourceUnit": 85,
-        "src": "25:22:2",
+        "scope": 174,
+        "sourceUnit": 650,
+        "src": "25:63:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "baseContracts": [],
-        "contractDependencies": [],
+        "absolutePath": "/C/Users/ariel/morels/contracts/Hyphae.sol",
+        "file": "./Hyphae.sol",
+        "id": 116,
+        "nodeType": "ImportDirective",
+        "scope": 174,
+        "sourceUnit": 28,
+        "src": "90:22:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 117,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 649,
+              "src": "137:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$649",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 118,
+            "nodeType": "InheritanceSpecifier",
+            "src": "137:7:3"
+          }
+        ],
+        "contractDependencies": [
+          27,
+          649
+        ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 96,
+        "id": 173,
         "linearizedBaseContracts": [
-          96
+          173,
+          649
         ],
         "name": "Mycelium",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 122,
+            "name": "_hyphaes",
+            "nodeType": "VariableDeclaration",
+            "scope": 173,
+            "src": "153:41:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+              "typeString": "mapping(uint8 => contract Hyphae)"
+            },
+            "typeName": {
+              "id": 121,
+              "keyType": {
+                "id": 119,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "161:5:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "153:24:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                "typeString": "mapping(uint8 => contract Hyphae)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 120,
+                "name": "Hyphae",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 27,
+                "src": "170:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_Hyphae_$27",
+                  "typeString": "contract Hyphae"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 124,
+            "name": "lastHyphae",
+            "nodeType": "VariableDeclaration",
+            "scope": 173,
+            "src": "201:24:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 123,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "201:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
             "body": {
-              "id": 94,
+              "id": 140,
               "nodeType": "Block",
-              "src": "119:8:2",
-              "statements": []
+              "src": "255:80:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 134,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 127,
+                        "name": "_hyphaes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 122,
+                        "src": "266:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                          "typeString": "mapping(uint8 => contract Hyphae)"
+                        }
+                      },
+                      "id": 129,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 128,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "275:1:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "266:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "67656e65736973",
+                          "id": 132,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "291:9:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_11f1efd0825aa3c737ce7a3831438f918cc83545afbed69e69fddee7e6fd5811",
+                            "typeString": "literal_string \"genesis\""
+                          },
+                          "value": "genesis"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_11f1efd0825aa3c737ce7a3831438f918cc83545afbed69e69fddee7e6fd5811",
+                            "typeString": "literal_string \"genesis\""
+                          }
+                        ],
+                        "id": 131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "280:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$returns$_t_contract$_Hyphae_$27_$",
+                          "typeString": "function (string memory) returns (contract Hyphae)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 130,
+                          "name": "Hyphae",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 27,
+                          "src": "284:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Hyphae_$27",
+                            "typeString": "contract Hyphae"
+                          }
+                        }
+                      },
+                      "id": 133,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "280:21:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "src": "266:35:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "id": 135,
+                  "nodeType": "ExpressionStatement",
+                  "src": "266:35:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 136,
+                      "name": "lastHyphae",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "313:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 137,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "326:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "313:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "313:14:3"
+                }
+              ]
             },
             "documentation": null,
-            "id": 95,
+            "id": 141,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 92,
+              "id": 125,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "245:2:3"
+            },
+            "returnParameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:0:3"
+            },
+            "scope": 173,
+            "src": "234:101:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 159,
+              "nodeType": "Block",
+              "src": "413:53:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 157,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 150,
+                        "name": "_hyphaes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 122,
+                        "src": "424:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                          "typeString": "mapping(uint8 => contract Hyphae)"
+                        }
+                      },
+                      "id": 152,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 151,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 143,
+                        "src": "433:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "424:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 155,
+                          "name": "name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 145,
+                          "src": "453:4:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 154,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "442:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$returns$_t_contract$_Hyphae_$27_$",
+                          "typeString": "function (string memory) returns (contract Hyphae)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 153,
+                          "name": "Hyphae",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 27,
+                          "src": "446:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_Hyphae_$27",
+                            "typeString": "contract Hyphae"
+                          }
+                        }
+                      },
+                      "id": 156,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "442:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Hyphae_$27",
+                        "typeString": "contract Hyphae"
+                      }
+                    },
+                    "src": "424:34:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "id": 158,
+                  "nodeType": "ExpressionStatement",
+                  "src": "424:34:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 160,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 148,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 147,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 582,
+                  "src": "403:9:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "403:9:3"
+              }
+            ],
+            "name": "newHyphae",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 146,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 89,
-                  "name": "_wallet",
+                  "id": 143,
+                  "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 95,
-                  "src": "81:15:2",
+                  "scope": 160,
+                  "src": "362:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 88,
-                    "name": "address",
+                    "id": 142,
+                    "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "81:7:2",
-                    "stateMutability": "nonpayable",
+                    "src": "362:5:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
                     }
                   },
                   "value": null,
@@ -256,53 +1397,186 @@
                 },
                 {
                   "constant": false,
-                  "id": 91,
-                  "name": "_token",
+                  "id": 145,
+                  "name": "name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 95,
-                  "src": "98:12:2",
+                  "scope": 160,
+                  "src": "375:18:3",
                   "stateVariable": false,
-                  "storageLocation": "default",
+                  "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC20_$969",
-                    "typeString": "contract ERC20"
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
                   },
                   "typeName": {
-                    "contractScope": null,
-                    "id": 90,
-                    "name": "ERC20",
-                    "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 969,
-                    "src": "98:5:2",
+                    "id": 144,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:6:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC20_$969",
-                      "typeString": "contract ERC20"
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "80:31:2"
+              "src": "361:33:3"
             },
             "returnParameters": {
-              "id": 93,
+              "id": 149,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "119:0:2"
+              "src": "413:0:3"
             },
-            "scope": 96,
-            "src": "69:58:2",
+            "scope": 173,
+            "src": "343:123:3",
             "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 171,
+              "nodeType": "Block",
+              "src": "535:41:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 167,
+                      "name": "_hyphaes",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 122,
+                      "src": "553:8:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_Hyphae_$27_$",
+                        "typeString": "mapping(uint8 => contract Hyphae)"
+                      }
+                    },
+                    "id": 169,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 168,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 162,
+                      "src": "562:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "553:15:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "functionReturnParameters": 166,
+                  "id": 170,
+                  "nodeType": "Return",
+                  "src": "546:22:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 172,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHyphae",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 162,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "493:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 161,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:13:3"
+            },
+            "returnParameters": {
+              "id": 166,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 165,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "527:6:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Hyphae_$27",
+                    "typeString": "contract Hyphae"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 164,
+                    "name": "Hyphae",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 27,
+                    "src": "527:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Hyphae_$27",
+                      "typeString": "contract Hyphae"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "526:8:3"
+            },
+            "scope": 173,
+            "src": "474:102:3",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 97,
-        "src": "49:80:2"
+        "scope": 174,
+        "src": "116:465:3"
       }
     ],
-    "src": "0:129:2"
+    "src": "0:581:3"
   },
   "compiler": {
     "name": "solc",
@@ -316,10 +1590,29 @@
       "transactionHash": "0x2c6b6f8eaaafb8d8ef1a50d4265968254fa4d39cf1810c97fa80f6b0d706244c"
     },
     "1562028267748": {
-      "events": {},
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        }
+      },
       "links": {},
-      "address": "0xb4Bb0bE806Fc7A1C3a93edB90Ae95245E1c5f053",
-      "transactionHash": "0x48e50d9ea83d781ffda3e423ee82365fb7069151e2366e3e8d5c952de8f9f0e2"
+      "address": "0xad62daB690ED8a5c8137FC4eFb080e5c8811030E",
+      "transactionHash": "0x880c18a94ab88c58c903976e02680a72187e895fe579b994285610c031fb2f57"
     },
     "1562336496821": {
       "events": {},
@@ -328,10 +1621,23 @@
       "transactionHash": "0x3afe210b5591b432d8e670c6d834f6020fb915d97631ba6aa89b28734418c390"
     }
   },
-  "schemaVersion": "3.0.11",
-  "updatedAt": "2019-07-05T14:23:27.732Z",
+  "schemaVersion": "3.0.10",
+  "updatedAt": "2019-07-07T04:23:32.520Z",
   "devdoc": {
-    "methods": {}
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
   },
   "userdoc": {
     "methods": {}

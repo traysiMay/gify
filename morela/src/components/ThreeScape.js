@@ -37,10 +37,11 @@ export const ThreeScape = ({ shroomArray }) => {
       if (objArray.length > 0) {
         for (let i = 0; i < objArray.length; i++) {
           objArray[i].rotation.y +=
-            0.1 * Math.sin(Date.now() * Math.PI * 0.0001) + i * 0.001;
+            0.1 * Math.sin(Date.now() * Math.PI * 0.0001) + i * 0.0001;
           objArray[i].rotation.x +=
-            0.01 * Math.sin(Date.now() * Math.PI * 0.0001) + i * 0.001;
-          objArray[i].scale.y += 0.01 * Math.sin(Date.now() * Math.PI * 0.0001);
+            0.01 * Math.sin(Date.now() * Math.PI * 0.0001) + i * 0.0001;
+          objArray[i].scale.y +=
+            0.01 * Math.sin(Date.now() * Math.PI * 0.00001);
           objArray[i].scale.x +=
             0.001 * Math.sin(Date.now() * Math.PI * 0.0001) * i;
         }
