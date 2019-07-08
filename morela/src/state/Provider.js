@@ -1,10 +1,10 @@
 import React from "react";
 import { Drizzle, generateStore } from "drizzle";
 import Context from "./Context";
-import Transhroomtation from "../contracts/Transhroomtation.json";
+import Toadstool from "../contracts/Toadstool.json";
 
 const options = {
-  contracts: [Transhroomtation],
+  contracts: [Toadstool],
   web3: {
     fallback: {
       type: "ws",

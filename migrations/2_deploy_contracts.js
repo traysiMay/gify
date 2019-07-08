@@ -1,14 +1,13 @@
-// const Morels = artifacts.require("./Morels.sol");
+const Toadstool = artifacts.require("./Toadstool.sol");
 const Mycelium = artifacts.require("./Mycelium.sol");
 
-module.exports = function(deployer, network, accounts) {
+module.exports = async function(deployer, network, accounts) {
   const wallet = accounts[1];
-  deployer.deploy(Mycelium);
-  // return deployer
-  //   .then(() => {
-  //     return deployer.deploy(Morels);
-  //   })
-  //   .then(() => {
-  //     return deployer.deploy(Mycelium, wallet, Morels.address);
-  //   });
+
+  await deployer.deploy(Mycelium);
+  const myceliumInstance = await Mycelium.deployed();
+  await deployer.deploy(Toadstool, "Toadstool", "TOAD");
+  const toadstoolInstance = await Toadstool.deployed();
+  toadstoolInstance.transferOwnership(myceliumInstance.address);
+  myceliumInstance.setToad(0, toadstoolInstance.address);
 };

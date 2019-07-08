@@ -5,22 +5,20 @@ import ThreeScape from "./ThreeScape";
 export const Home = () => {
   const { drizzle, drizzleState } = useContext(DrizzleContext.Context);
   const [shroomArray, setShroomArray] = useState([]);
-  const transhroomtation = drizzle.contracts.Transhroomtation;
+  const toadstool = drizzle.contracts.Toadstool;
 
   useEffect(() => {
     const getLastColor = async () => {
-      const shroomLength = await transhroomtation.methods
-        .getShroomsLength()
-        .call();
+      const shroomLength = await toadstool.methods.getShroomsLength().call();
       const sArray = [];
       for (let i = 0; i < shroomLength; i++) {
-        const shroomObj = await transhroomtation.methods.getShroom(i).call();
+        const shroomObj = await toadstool.methods.getShroom(i).call();
         sArray.push(shroomObj);
       }
       setShroomArray(sArray);
     };
     getLastColor();
-  }, [drizzleState, transhroomtation.methods]);
+  }, [drizzleState, toadstool.methods]);
 
   return (
     <div>
