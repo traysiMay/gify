@@ -1,23 +1,23 @@
 pragma solidity ^0.5.8;
-import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
-import './Hyphae.sol';
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "./Hyphae.sol";
 
+
+// Executive controls
 contract Mycelium is Ownable{
 
-    mapping(uint8 => Hyphae) private _hyphaes;
+    mapping(uint8 => address) public _hAddys;
     uint8 private lastHyphae;
 
     constructor() public {
-        _hyphaes[0] = new Hyphae('genesis'); 
+        newHyphae2(0, "genesis");
         lastHyphae = 0;
     }
 
-    function newHyphae(uint8 index, string memory name) public onlyOwner {
-        _hyphaes[index] = new Hyphae(name);
-    }
-
-    function getHyphae(uint8 index) public view returns (Hyphae) {
-        return _hyphaes[index];
+    function newHyphae2(uint8 index, string memory name) public onlyOwner returns (address) {
+        address _h = address(new Hyphae(name));
+        _hAddys[index] = _h;
+        return _h;
     }
 
 }

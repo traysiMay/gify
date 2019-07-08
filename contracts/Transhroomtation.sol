@@ -1,11 +1,11 @@
 pragma solidity ^0.5.0;
 
-import 'openzeppelin-solidity/contracts/token/ERC721/ERC721.sol';
-import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
+import "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 contract Transhroomtation is ERC721, Ownable {
-    string public constant name = 'NewdShroom';
-    string public constant symbol = 'SHRM';
+    string public constant name = "NewdShroom";
+    string public constant symbol = "SHRM";
     
     struct Shroom {
         uint8 r;
@@ -35,6 +35,7 @@ contract Transhroomtation is ERC721, Ownable {
     function deathToMushrooms() public {
         for (uint i = 0; i < shrooms.length ; i++ ) {
             delete shrooms[i];
+            shrooms.length--;
         }
     }
 

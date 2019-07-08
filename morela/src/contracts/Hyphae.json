@@ -107,23 +107,50 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSpore",
+      "outputs": [
+        {
+          "name": "r",
+          "type": "uint8"
+        },
+        {
+          "name": "g",
+          "type": "uint8"
+        },
+        {
+          "name": "b",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/ariel/morels/contracts/Hyphae.sol\":\"Hyphae\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/ariel/morels/contracts/Hyphae.sol\":{\"keccak256\":\"0x6a508ed85b68ab042ac23bff7c8c4cb62e76e9b5060f46dbb675b0970d5cb4ea\",\"urls\":[\"bzzr://d3c65b7535252f62e7fce4da9d609a874b338550df8663cc1485a72cd95c6c83\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzzr://d12a11272051eb6586de8f7e0a82c04a98c9984ce8b2a6cf1ee439f65aba29a9\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060405161094f38038061094f8339810180604052602081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b5050929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806001908051906020019061015892919061015f565b5050610204565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101a057805160ff19168380011785556101ce565b828001600101855582156101ce579182015b828111156101cd5782518255916020019190600101906101b2565b5b5090506101db91906101df565b5090565b61020191905b808211156101fd5760008160009055506001016101e5565b5090565b90565b61073c806102136000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806317d7de7c14610067578063715018a6146100ea5780638da5cb5b146100f45780638f32d59b1461013e578063d28d885214610160578063f2fde38b146101e3575b600080fd5b61006f610227565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100f26102c9565b005b6100fc610402565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61014661042b565b604051808215151515815260200191505060405180910390f35b610168610482565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101a857808201518184015260208101905061018d565b50505050905090810190601f1680156101d55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610225600480360360208110156101f957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610520565b005b606060018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102bf5780601f10610294576101008083540402835291602001916102bf565b820191906000526020600020905b8154815290600101906020018083116102a257829003601f168201915b5050505050905090565b6102d161042b565b610343576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105185780601f106104ed57610100808354040283529160200191610518565b820191906000526020600020905b8154815290600101906020018083116104fb57829003601f168201915b505050505081565b61052861042b565b61059a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6105a3816105a6565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561062c576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806106eb6026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a7230582025c5c84d0d939d159033f51dc4fe3814432dcf6c8ead304e068a2e5dac3d91770029",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806317d7de7c14610067578063715018a6146100ea5780638da5cb5b146100f45780638f32d59b1461013e578063d28d885214610160578063f2fde38b146101e3575b600080fd5b61006f610227565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100f26102c9565b005b6100fc610402565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61014661042b565b604051808215151515815260200191505060405180910390f35b610168610482565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101a857808201518184015260208101905061018d565b50505050905090810190601f1680156101d55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610225600480360360208110156101f957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610520565b005b606060018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102bf5780601f10610294576101008083540402835291602001916102bf565b820191906000526020600020905b8154815290600101906020018083116102a257829003601f168201915b5050505050905090565b6102d161042b565b610343576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105185780601f106104ed57610100808354040283529160200191610518565b820191906000526020600020905b8154815290600101906020018083116104fb57829003601f168201915b505050505081565b61052861042b565b61059a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6105a3816105a6565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561062c576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806106eb6026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a7230582025c5c84d0d939d159033f51dc4fe3814432dcf6c8ead304e068a2e5dac3d91770029",
-  "sourceMap": "92:260:0:-;;;185:70;8:9:-1;5:2;;;30:1;27;20:12;5:2;185:70:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;185:70:0;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;185:70:0;;;;;;666:10:9;657:6;;:19;;;;;;;;;;;;;;;;;;724:6;;;;;;;;;;;691:40;;720:1;691:40;;;;;;;;;;;;243:4:0;235:5;:12;;;;;;;;;;;;:::i;:::-;;185:70;92:260;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "92:260:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;92:260:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;263:86;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;263:86:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1599:137:9;;;:::i;:::-;;814:77;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1165:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;125:19:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;125:19:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1885:107:9;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1885:107:9;;;;;;;;;;;;;;;;;;;:::i;:::-;;263:86:0;303:13;336:5;329:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;263:86;:::o;1599:137:9:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1697:1;1660:40;;1681:6;;;;;;;;;;;1660:40;;;;;;;;;;;;1727:1;1710:6;;:19;;;;;;;;;;;;;;;;;;1599:137::o;814:77::-;852:7;878:6;;;;;;;;;;;871:13;;814:77;:::o;1165:90::-;1205:4;1242:6;;;;;;;;;;;1228:20;;:10;:20;;;1221:27;;1165:90;:::o;125:19:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1885:107:9:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1957:28;1976:8;1957:18;:28::i;:::-;1885:107;:::o;2093:225::-;2186:1;2166:22;;:8;:22;;;;2158:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2275:8;2246:38;;2267:6;;;;;;;;;;;2246:38;;;;;;;;;;;;2303:8;2294:6;;:17;;;;;;;;;;;;;;;;;;2093:225;:::o",
-  "source": "pragma solidity ^0.5.8;\r\nimport 'openzeppelin-solidity/contracts/ownership/Ownable.sol';\r\n\r\ncontract Hyphae is Ownable{\r\n    string public _name;\r\n    address private _mycelium;\r\n\r\n    constructor(string memory name) public {\r\n        _name = name;\r\n    }\r\n\r\n    function getName() public view returns (string memory) {\r\n        return _name;\r\n    }\r\n}",
-  "sourcePath": "C:\\Users\\ariel\\morels\\contracts\\Hyphae.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getSpore\",\"outputs\":[{\"name\":\"r\",\"type\":\"uint8\"},{\"name\":\"g\",\"type\":\"uint8\"},{\"name\":\"b\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ariel.klevecz/gify/contracts/Hyphae.sol\":\"Hyphae\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ariel.klevecz/gify/contracts/Hyphae.sol\":{\"keccak256\":\"0x8cff94a52d13607bb99c0c30a3097d8c371a58d438268276bbea32daca4f7dc7\",\"urls\":[\"bzzr://3624f090df1fb82336f615d72ddbb6d569b0185a1777f07b1da6734e4d6d6bc6\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzzr://d12a11272051eb6586de8f7e0a82c04a98c9984ce8b2a6cf1ee439f65aba29a9\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610d25380380610d258339810180604052602081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b5050929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a380600190805190602001906101589291906103bf565b5060008090505b601e8110156103b85761017061043f565b604051806060016040528060ff80168152602001600060ff168152602001600060ff1681525090506101a061043f565b6040518060600160405280600060ff16815260200160ff80168152602001600060ff1681525090506101d061043f565b6040518060600160405280600060ff168152602001600060ff16815260200160ff8016815250905060038390806001815401808255809150509060018203906000526020600020016000909192909190915060008201518160000160006101000a81548160ff021916908360ff16021790555060208201518160000160016101000a81548160ff021916908360ff16021790555060408201518160000160026101000a81548160ff021916908360ff16021790555050505060038290806001815401808255809150509060018203906000526020600020016000909192909190915060008201518160000160006101000a81548160ff021916908360ff16021790555060208201518160000160016101000a81548160ff021916908360ff16021790555060408201518160000160026101000a81548160ff021916908360ff16021790555050505060038190806001815401808255809150509060018203906000526020600020016000909192909190915060008201518160000160006101000a81548160ff021916908360ff16021790555060208201518160000160016101000a81548160ff021916908360ff16021790555060408201518160000160026101000a81548160ff021916908360ff160217905550505050505050808060010191505061015f565b505061048e565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061040057805160ff191683800117855561042e565b8280016001018555821561042e579182015b8281111561042d578251825591602001919060010190610412565b5b50905061043b9190610469565b5090565b6040518060600160405280600060ff168152602001600060ff168152602001600060ff1681525090565b61048b91905b8082111561048757600081600090555060010161046f565b5090565b90565b6108888061049d6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b14610159578063d033974f1461017b578063d28d8852146101dd578063f2fde38b146102605761007d565b806317d7de7c14610082578063715018a6146101055780638da5cb5b1461010f575b600080fd5b61008a6102a4565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100ca5780820151818401526020810190506100af565b50505050905090810190601f1680156100f75780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61010d610346565b005b61011761047f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101616104a8565b604051808215151515815260200191505060405180910390f35b6101a76004803603602081101561019157600080fd5b81019080803590602001909291905050506104ff565b604051808460ff1660ff1681526020018360ff1660ff1681526020018260ff1660ff168152602001935050505060405180910390f35b6101e56105a4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561022557808201518184015260208101905061020a565b50505050905090810190601f1680156102525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102a26004803603602081101561027657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610642565b005b606060018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561033c5780601f106103115761010080835404028352916020019161033c565b820191906000526020600020905b81548152906001019060200180831161031f57829003601f168201915b5050505050905090565b61034e6104a8565b6103c0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600080600061050c61080c565b6003858154811061051957fe5b906000526020600020016040518060600160405290816000820160009054906101000a900460ff1660ff1660ff1681526020016000820160019054906101000a900460ff1660ff1660ff1681526020016000820160029054906101000a900460ff1660ff1660ff16815250509050806000015181602001518260400151935093509350509193909250565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561063a5780601f1061060f5761010080835404028352916020019161063a565b820191906000526020600020905b81548152906001019060200180831161061d57829003601f168201915b505050505081565b61064a6104a8565b6106bc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6106c5816106c8565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561074e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806108376026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6040518060600160405280600060ff168152602001600060ff168152602001600060ff168152509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a72305820f496af839b5a71b7b64823cd6b13b0cfadf75b98ca88046753cf379d58b0bfb10029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b14610159578063d033974f1461017b578063d28d8852146101dd578063f2fde38b146102605761007d565b806317d7de7c14610082578063715018a6146101055780638da5cb5b1461010f575b600080fd5b61008a6102a4565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100ca5780820151818401526020810190506100af565b50505050905090810190601f1680156100f75780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61010d610346565b005b61011761047f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101616104a8565b604051808215151515815260200191505060405180910390f35b6101a76004803603602081101561019157600080fd5b81019080803590602001909291905050506104ff565b604051808460ff1660ff1681526020018360ff1660ff1681526020018260ff1660ff168152602001935050505060405180910390f35b6101e56105a4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561022557808201518184015260208101905061020a565b50505050905090810190601f1680156102525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102a26004803603602081101561027657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610642565b005b606060018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561033c5780601f106103115761010080835404028352916020019161033c565b820191906000526020600020905b81548152906001019060200180831161031f57829003601f168201915b5050505050905090565b61034e6104a8565b6103c0576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600080600061050c61080c565b6003858154811061051957fe5b906000526020600020016040518060600160405290816000820160009054906101000a900460ff1660ff1660ff1681526020016000820160019054906101000a900460ff1660ff1660ff1681526020016000820160029054906101000a900460ff1660ff1660ff16815250509050806000015181602001518260400151935093509350509193909250565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561063a5780601f1061060f5761010080835404028352916020019161063a565b820191906000526020600020905b81548152906001019060200180831161061d57829003601f168201915b505050505081565b61064a6104a8565b6106bc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6106c5816106c8565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561074e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806108376026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6040518060600160405280600060ff168152602001600060ff168152602001600060ff168152509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a165627a7a72305820f496af839b5a71b7b64823cd6b13b0cfadf75b98ca88046753cf379d58b0bfb10029",
+  "sourceMap": "135:875:0:-;;;323:412;8:9:-1;5:2;;;30:1;27;20:12;5:2;323:412:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;323:412:0;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;323:412:0;;;;;;666:10:9;657:6;;:19;;;;;;;;;;;;;;;;;;724:6;;;;;;;;;;;691:40;;720:1;691:40;;;;;;;;;;;;380:4:0;372:5;:12;;;;;;;;;;;;:::i;:::-;;399:6;408:1;399:10;;394:335;415:2;411:1;:6;394:335;;;440:20;;:::i;:::-;463:27;;;;;;;;473:3;463:27;;;;;;480:1;463:27;;;;;;486:1;463:27;;;;;440:50;;504:20;;:::i;:::-;527:26;;;;;;;;537:1;527:26;;;;;;542:3;527:26;;;;;;549:1;527:26;;;;;504:49;;567:20;;:::i;:::-;590:26;;;;;;;;600:1;590:26;;;;;;605:1;590:26;;;;;;610:3;590:26;;;;;567:49;;630:6;642:7;630:20;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;630:20:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;664:6;676:7;664:20;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;664:20:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;698:6;710:7;698:20;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;698:20:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;394:335;;;420:3;;;;;;;394:335;;;;323:412;135:875;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "135:875:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;135:875:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;741:84;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;741:84:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1599:137:9;;;:::i;:::-;;814:77;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1165:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;831:177:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;831:177:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:19;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;168:19:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1885:107:9;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1885:107:9;;;;;;;;;;;;;;;;;;;:::i;:::-;;741:84:0;781:13;813:5;806:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;741:84;:::o;1599:137:9:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1697:1;1660:40;;1681:6;;;;;;;;;;;1660:40;;;;;;;;;;;;1727:1;1710:6;;:19;;;;;;;;;;;;;;;;;;1599:137::o;814:77::-;852:7;878:6;;;;;;;;;;;871:13;;814:77;:::o;1165:90::-;1205:4;1242:6;;;;;;;;;;;1228:20;;:10;:20;;;1221:27;;1165:90;:::o;831:177:0:-;882:7;891;900;919:19;;:::i;:::-;941:6;948:5;941:13;;;;;;;;;;;;;;;919:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;972:6;:8;;;982:6;:8;;;992:6;:8;;;964:37;;;;;;;831:177;;;;;:::o;168:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1885:107:9:-;1018:9;:7;:9::i;:::-;1010:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1957:28;1976:8;1957:18;:28::i;:::-;1885:107;:::o;2093:225::-;2186:1;2166:22;;:8;:22;;;;2158:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2275:8;2246:38;;2267:6;;;;;;;;;;;2246:38;;;;;;;;;;;;2303:8;2294:6;;:17;;;;;;;;;;;;;;;;;;2093:225;:::o;135:875:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.8;\nimport \"openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\n\n// Hyphae has a name\n// Hyphae has 30 spores\ncontract Hyphae is Ownable{\n\n    string public _name;\n    address private _mycelium;\n\n    struct Spore {\n        uint8 r;\n        uint8 g;\n        uint8 b;\n    }\n\n    Spore[] spores;\n\n    constructor(string memory name) public {\n        _name = name;\n        for (uint i = 0; i < 30 ; i++ ) {\n            Spore memory _sporeR = Spore({ r:255, g:0, b: 0 });\n            Spore memory _sporeG = Spore({ r:0, g:255, b:0 });\n            Spore memory _sporeB = Spore({ r:0, g:0, b:255 });\n            spores.push(_sporeR);\n            spores.push(_sporeG);\n            spores.push(_sporeB);\n        }\n    }\n\n    function getName() public view returns (string memory) {\n        return _name;\n    }\n\n    function getSpore(uint index) public view returns (uint8 r, uint8 g, uint8 b) {\n        Spore memory _spore = spores[index];\n        return (_spore.r, _spore.g, _spore.b);\n    }\n}",
+  "sourcePath": "/Users/ariel.klevecz/gify/contracts/Hyphae.sol",
   "ast": {
-    "absolutePath": "/C/Users/ariel/morels/contracts/Hyphae.sol",
+    "absolutePath": "/Users/ariel.klevecz/gify/contracts/Hyphae.sol",
     "exportedSymbols": {
       "Hyphae": [
-        27
+        117
       ]
     },
-    "id": 28,
+    "id": 118,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -142,9 +169,9 @@
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "id": 2,
         "nodeType": "ImportDirective",
-        "scope": 28,
-        "sourceUnit": 650,
-        "src": "25:63:0",
+        "scope": 118,
+        "sourceUnit": 778,
+        "src": "24:63:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -157,28 +184,28 @@
               "id": 3,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 649,
-              "src": "111:7:0",
+              "referencedDeclaration": 777,
+              "src": "154:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$649",
+                "typeIdentifier": "t_contract$_Ownable_$777",
                 "typeString": "contract Ownable"
               }
             },
             "id": 4,
             "nodeType": "InheritanceSpecifier",
-            "src": "111:7:0"
+            "src": "154:7:0"
           }
         ],
         "contractDependencies": [
-          649
+          777
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 27,
+        "id": 117,
         "linearizedBaseContracts": [
-          27,
-          649
+          117,
+          777
         ],
         "name": "Hyphae",
         "nodeType": "ContractDefinition",
@@ -188,8 +215,8 @@
             "id": 6,
             "name": "_name",
             "nodeType": "VariableDeclaration",
-            "scope": 27,
-            "src": "125:19:0",
+            "scope": 117,
+            "src": "168:19:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -200,7 +227,7 @@
               "id": 5,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "125:6:0",
+              "src": "168:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -214,8 +241,8 @@
             "id": 8,
             "name": "_mycelium",
             "nodeType": "VariableDeclaration",
-            "scope": 27,
-            "src": "151:25:0",
+            "scope": 117,
+            "src": "193:25:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -226,7 +253,7 @@
               "id": 7,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "151:7:0",
+              "src": "193:7:0",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -237,27 +264,154 @@
             "visibility": "private"
           },
           {
-            "body": {
+            "canonicalName": "Hyphae.Spore",
+            "id": 15,
+            "members": [
+              {
+                "constant": false,
+                "id": 10,
+                "name": "r",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "248:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "248:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "g",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "265:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "265:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "b",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "282:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "282:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Spore",
+            "nodeType": "StructDefinition",
+            "scope": 117,
+            "src": "225:71:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 18,
+            "name": "spores",
+            "nodeType": "VariableDeclaration",
+            "scope": 117,
+            "src": "302:14:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+              "typeString": "struct Hyphae.Spore[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 16,
+                "name": "Spore",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 15,
+                "src": "302:5:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                  "typeString": "struct Hyphae.Spore"
+                }
+              },
               "id": 17,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "302:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage_ptr",
+                "typeString": "struct Hyphae.Spore[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 81,
               "nodeType": "Block",
-              "src": "224:31:0",
+              "src": "362:373:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 15,
+                    "id": 25,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 13,
+                      "id": 23,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 6,
-                      "src": "235:5:0",
+                      "src": "372:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -267,47 +421,827 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 14,
+                      "id": 24,
                       "name": "name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10,
-                      "src": "243:4:0",
+                      "referencedDeclaration": 20,
+                      "src": "380:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
                       }
                     },
-                    "src": "235:12:0",
+                    "src": "372:12:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 16,
+                  "id": 26,
                   "nodeType": "ExpressionStatement",
-                  "src": "235:12:0"
+                  "src": "372:12:0"
+                },
+                {
+                  "body": {
+                    "id": 79,
+                    "nodeType": "Block",
+                    "src": "426:303:0",
+                    "statements": [
+                      {
+                        "assignments": [
+                          38
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 38,
+                            "name": "_sporeR",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 79,
+                            "src": "440:20:0",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                              "typeString": "struct Hyphae.Spore"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 37,
+                              "name": "Spore",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 15,
+                              "src": "440:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                                "typeString": "struct Hyphae.Spore"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 44,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "323535",
+                              "id": 40,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "473:3:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              "value": "255"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 41,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "480:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 42,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "486:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 39,
+                            "name": "Spore",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 15,
+                            "src": "463:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_struct$_Spore_$15_storage_ptr_$",
+                              "typeString": "type(struct Hyphae.Spore storage pointer)"
+                            }
+                          },
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "r",
+                            "g",
+                            "b"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "463:27:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "440:50:0"
+                      },
+                      {
+                        "assignments": [
+                          46
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 46,
+                            "name": "_sporeG",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 79,
+                            "src": "504:20:0",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                              "typeString": "struct Hyphae.Spore"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 45,
+                              "name": "Spore",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 15,
+                              "src": "504:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                                "typeString": "struct Hyphae.Spore"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 52,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 48,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "537:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "323535",
+                              "id": 49,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "542:3:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              "value": "255"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 50,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "549:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 47,
+                            "name": "Spore",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 15,
+                            "src": "527:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_struct$_Spore_$15_storage_ptr_$",
+                              "typeString": "type(struct Hyphae.Spore storage pointer)"
+                            }
+                          },
+                          "id": 51,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "r",
+                            "g",
+                            "b"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "527:26:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "504:49:0"
+                      },
+                      {
+                        "assignments": [
+                          54
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 54,
+                            "name": "_sporeB",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 79,
+                            "src": "567:20:0",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                              "typeString": "struct Hyphae.Spore"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 53,
+                              "name": "Spore",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 15,
+                              "src": "567:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                                "typeString": "struct Hyphae.Spore"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 60,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 56,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "600:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 57,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "605:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "323535",
+                              "id": 58,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "610:3:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              "value": "255"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "Spore",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 15,
+                            "src": "590:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_struct$_Spore_$15_storage_ptr_$",
+                              "typeString": "type(struct Hyphae.Spore storage pointer)"
+                            }
+                          },
+                          "id": 59,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "r",
+                            "g",
+                            "b"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "590:26:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "567:49:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 64,
+                              "name": "_sporeR",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38,
+                              "src": "642:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 61,
+                              "name": "spores",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "630:6:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                                "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                              }
+                            },
+                            "id": 63,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "630:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Spore_$15_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Hyphae.Spore storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 65,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "630:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 66,
+                        "nodeType": "ExpressionStatement",
+                        "src": "630:20:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 70,
+                              "name": "_sporeG",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 46,
+                              "src": "676:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 67,
+                              "name": "spores",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "664:6:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                                "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                              }
+                            },
+                            "id": 69,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "664:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Spore_$15_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Hyphae.Spore storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 71,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "664:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 72,
+                        "nodeType": "ExpressionStatement",
+                        "src": "664:20:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 76,
+                              "name": "_sporeB",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 54,
+                              "src": "710:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 73,
+                              "name": "spores",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "698:6:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                                "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                              }
+                            },
+                            "id": 75,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "698:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Spore_$15_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Hyphae.Spore storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 77,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "698:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 78,
+                        "nodeType": "ExpressionStatement",
+                        "src": "698:20:0"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 33,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 31,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 28,
+                      "src": "411:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "3330",
+                      "id": 32,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "415:2:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_30_by_1",
+                        "typeString": "int_const 30"
+                      },
+                      "value": "30"
+                    },
+                    "src": "411:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 80,
+                  "initializationExpression": {
+                    "assignments": [
+                      28
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 28,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 80,
+                        "src": "399:6:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 27,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "399:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 30,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "408:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "399:10:0"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "420:3:0",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28,
+                        "src": "420:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 36,
+                    "nodeType": "ExpressionStatement",
+                    "src": "420:3:0"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "394:335:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 18,
+            "id": 82,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11,
+              "id": 21,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10,
+                  "id": 20,
                   "name": "name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18,
-                  "src": "197:18:0",
+                  "scope": 82,
+                  "src": "335:18:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -315,10 +1249,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 9,
+                    "id": 19,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "197:6:0",
+                    "src": "335:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -328,71 +1262,71 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "196:20:0"
+              "src": "334:20:0"
             },
             "returnParameters": {
-              "id": 12,
+              "id": 22,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "224:0:0"
+              "src": "362:0:0"
             },
-            "scope": 27,
-            "src": "185:70:0",
+            "scope": 117,
+            "src": "323:412:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 25,
+              "id": 89,
               "nodeType": "Block",
-              "src": "318:31:0",
+              "src": "796:29:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 23,
+                    "id": 87,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 6,
-                    "src": "336:5:0",
+                    "src": "813:5:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 22,
-                  "id": 24,
+                  "functionReturnParameters": 86,
+                  "id": 88,
                   "nodeType": "Return",
-                  "src": "329:12:0"
+                  "src": "806:12:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 26,
+            "id": 90,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getName",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "279:2:0"
+              "src": "757:2:0"
             },
             "returnParameters": {
-              "id": 22,
+              "id": 86,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 21,
+                  "id": 85,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26,
-                  "src": "303:13:0",
+                  "scope": 90,
+                  "src": "781:13:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -400,10 +1334,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 20,
+                    "id": 84,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "303:6:0",
+                    "src": "781:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -413,29 +1347,356 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "302:15:0"
+              "src": "780:15:0"
             },
-            "scope": 27,
-            "src": "263:86:0",
+            "scope": 117,
+            "src": "741:84:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "909:99:0",
+              "statements": [
+                {
+                  "assignments": [
+                    102
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 102,
+                      "name": "_spore",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 115,
+                      "src": "919:19:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                        "typeString": "struct Hyphae.Spore"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 101,
+                        "name": "Spore",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 15,
+                        "src": "919:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                          "typeString": "struct Hyphae.Spore"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 106,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 103,
+                      "name": "spores",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "941:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                        "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                      }
+                    },
+                    "id": 105,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 104,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 92,
+                      "src": "948:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "941:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Spore_$15_storage",
+                      "typeString": "struct Hyphae.Spore storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "919:35:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 107,
+                          "name": "_spore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "972:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "id": 108,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "r",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 10,
+                        "src": "972:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 109,
+                          "name": "_spore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "982:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "id": 110,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "g",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 12,
+                        "src": "982:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 111,
+                          "name": "_spore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "992:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "id": 112,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "b",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 14,
+                        "src": "992:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "id": 113,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "971:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint8_$_t_uint8_$_t_uint8_$",
+                      "typeString": "tuple(uint8,uint8,uint8)"
+                    }
+                  },
+                  "functionReturnParameters": 100,
+                  "id": 114,
+                  "nodeType": "Return",
+                  "src": "964:37:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 116,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSpore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 92,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "849:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "849:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "848:12:0"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 95,
+                  "name": "r",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "882:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 94,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "882:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 97,
+                  "name": "g",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "891:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 96,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "891:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 99,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "900:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "881:27:0"
+            },
+            "scope": 117,
+            "src": "831:177:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 28,
-        "src": "92:260:0"
+        "scope": 118,
+        "src": "135:875:0"
       }
     ],
-    "src": "0:352:0"
+    "src": "0:1010:0"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/ariel/morels/contracts/Hyphae.sol",
+    "absolutePath": "/Users/ariel.klevecz/gify/contracts/Hyphae.sol",
     "exportedSymbols": {
       "Hyphae": [
-        27
+        117
       ]
     },
-    "id": 28,
+    "id": 118,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -454,9 +1715,9 @@
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "id": 2,
         "nodeType": "ImportDirective",
-        "scope": 28,
-        "sourceUnit": 650,
-        "src": "25:63:0",
+        "scope": 118,
+        "sourceUnit": 778,
+        "src": "24:63:0",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -469,28 +1730,28 @@
               "id": 3,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 649,
-              "src": "111:7:0",
+              "referencedDeclaration": 777,
+              "src": "154:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$649",
+                "typeIdentifier": "t_contract$_Ownable_$777",
                 "typeString": "contract Ownable"
               }
             },
             "id": 4,
             "nodeType": "InheritanceSpecifier",
-            "src": "111:7:0"
+            "src": "154:7:0"
           }
         ],
         "contractDependencies": [
-          649
+          777
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 27,
+        "id": 117,
         "linearizedBaseContracts": [
-          27,
-          649
+          117,
+          777
         ],
         "name": "Hyphae",
         "nodeType": "ContractDefinition",
@@ -500,8 +1761,8 @@
             "id": 6,
             "name": "_name",
             "nodeType": "VariableDeclaration",
-            "scope": 27,
-            "src": "125:19:0",
+            "scope": 117,
+            "src": "168:19:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -512,7 +1773,7 @@
               "id": 5,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "125:6:0",
+              "src": "168:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -526,8 +1787,8 @@
             "id": 8,
             "name": "_mycelium",
             "nodeType": "VariableDeclaration",
-            "scope": 27,
-            "src": "151:25:0",
+            "scope": 117,
+            "src": "193:25:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -538,7 +1799,7 @@
               "id": 7,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "151:7:0",
+              "src": "193:7:0",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -549,27 +1810,154 @@
             "visibility": "private"
           },
           {
-            "body": {
+            "canonicalName": "Hyphae.Spore",
+            "id": 15,
+            "members": [
+              {
+                "constant": false,
+                "id": 10,
+                "name": "r",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "248:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "248:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "g",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "265:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "265:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "b",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "282:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "282:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Spore",
+            "nodeType": "StructDefinition",
+            "scope": 117,
+            "src": "225:71:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 18,
+            "name": "spores",
+            "nodeType": "VariableDeclaration",
+            "scope": 117,
+            "src": "302:14:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+              "typeString": "struct Hyphae.Spore[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 16,
+                "name": "Spore",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 15,
+                "src": "302:5:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                  "typeString": "struct Hyphae.Spore"
+                }
+              },
               "id": 17,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "302:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage_ptr",
+                "typeString": "struct Hyphae.Spore[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 81,
               "nodeType": "Block",
-              "src": "224:31:0",
+              "src": "362:373:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 15,
+                    "id": 25,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 13,
+                      "id": 23,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 6,
-                      "src": "235:5:0",
+                      "src": "372:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -579,47 +1967,827 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 14,
+                      "id": 24,
                       "name": "name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10,
-                      "src": "243:4:0",
+                      "referencedDeclaration": 20,
+                      "src": "380:4:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
                       }
                     },
-                    "src": "235:12:0",
+                    "src": "372:12:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 16,
+                  "id": 26,
                   "nodeType": "ExpressionStatement",
-                  "src": "235:12:0"
+                  "src": "372:12:0"
+                },
+                {
+                  "body": {
+                    "id": 79,
+                    "nodeType": "Block",
+                    "src": "426:303:0",
+                    "statements": [
+                      {
+                        "assignments": [
+                          38
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 38,
+                            "name": "_sporeR",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 79,
+                            "src": "440:20:0",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                              "typeString": "struct Hyphae.Spore"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 37,
+                              "name": "Spore",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 15,
+                              "src": "440:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                                "typeString": "struct Hyphae.Spore"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 44,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "323535",
+                              "id": 40,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "473:3:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              "value": "255"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 41,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "480:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 42,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "486:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 39,
+                            "name": "Spore",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 15,
+                            "src": "463:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_struct$_Spore_$15_storage_ptr_$",
+                              "typeString": "type(struct Hyphae.Spore storage pointer)"
+                            }
+                          },
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "r",
+                            "g",
+                            "b"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "463:27:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "440:50:0"
+                      },
+                      {
+                        "assignments": [
+                          46
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 46,
+                            "name": "_sporeG",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 79,
+                            "src": "504:20:0",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                              "typeString": "struct Hyphae.Spore"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 45,
+                              "name": "Spore",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 15,
+                              "src": "504:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                                "typeString": "struct Hyphae.Spore"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 52,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 48,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "537:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "323535",
+                              "id": 49,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "542:3:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              "value": "255"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 50,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "549:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 47,
+                            "name": "Spore",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 15,
+                            "src": "527:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_struct$_Spore_$15_storage_ptr_$",
+                              "typeString": "type(struct Hyphae.Spore storage pointer)"
+                            }
+                          },
+                          "id": 51,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "r",
+                            "g",
+                            "b"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "527:26:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "504:49:0"
+                      },
+                      {
+                        "assignments": [
+                          54
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 54,
+                            "name": "_sporeB",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 79,
+                            "src": "567:20:0",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                              "typeString": "struct Hyphae.Spore"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 53,
+                              "name": "Spore",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 15,
+                              "src": "567:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                                "typeString": "struct Hyphae.Spore"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 60,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 56,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "600:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 57,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "605:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "323535",
+                              "id": 58,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "610:3:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              },
+                              "value": "255"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_255_by_1",
+                                "typeString": "int_const 255"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "Spore",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 15,
+                            "src": "590:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_struct$_Spore_$15_storage_ptr_$",
+                              "typeString": "type(struct Hyphae.Spore storage pointer)"
+                            }
+                          },
+                          "id": 59,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "structConstructorCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "r",
+                            "g",
+                            "b"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "590:26:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "567:49:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 64,
+                              "name": "_sporeR",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38,
+                              "src": "642:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 61,
+                              "name": "spores",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "630:6:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                                "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                              }
+                            },
+                            "id": 63,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "630:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Spore_$15_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Hyphae.Spore storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 65,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "630:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 66,
+                        "nodeType": "ExpressionStatement",
+                        "src": "630:20:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 70,
+                              "name": "_sporeG",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 46,
+                              "src": "676:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 67,
+                              "name": "spores",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "664:6:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                                "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                              }
+                            },
+                            "id": 69,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "664:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Spore_$15_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Hyphae.Spore storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 71,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "664:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 72,
+                        "nodeType": "ExpressionStatement",
+                        "src": "664:20:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 76,
+                              "name": "_sporeB",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 54,
+                              "src": "710:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                                "typeString": "struct Hyphae.Spore memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 73,
+                              "name": "spores",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "698:6:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                                "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                              }
+                            },
+                            "id": 75,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "698:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Spore_$15_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Hyphae.Spore storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 77,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "698:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 78,
+                        "nodeType": "ExpressionStatement",
+                        "src": "698:20:0"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 33,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 31,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 28,
+                      "src": "411:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "3330",
+                      "id": 32,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "415:2:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_30_by_1",
+                        "typeString": "int_const 30"
+                      },
+                      "value": "30"
+                    },
+                    "src": "411:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 80,
+                  "initializationExpression": {
+                    "assignments": [
+                      28
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 28,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 80,
+                        "src": "399:6:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 27,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "399:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 30,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "408:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "399:10:0"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "420:3:0",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28,
+                        "src": "420:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 36,
+                    "nodeType": "ExpressionStatement",
+                    "src": "420:3:0"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "394:335:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 18,
+            "id": 82,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11,
+              "id": 21,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10,
+                  "id": 20,
                   "name": "name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 18,
-                  "src": "197:18:0",
+                  "scope": 82,
+                  "src": "335:18:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -627,10 +2795,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 9,
+                    "id": 19,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "197:6:0",
+                    "src": "335:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -640,71 +2808,71 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "196:20:0"
+              "src": "334:20:0"
             },
             "returnParameters": {
-              "id": 12,
+              "id": 22,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "224:0:0"
+              "src": "362:0:0"
             },
-            "scope": 27,
-            "src": "185:70:0",
+            "scope": 117,
+            "src": "323:412:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 25,
+              "id": 89,
               "nodeType": "Block",
-              "src": "318:31:0",
+              "src": "796:29:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 23,
+                    "id": 87,
                     "name": "_name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 6,
-                    "src": "336:5:0",
+                    "src": "813:5:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 22,
-                  "id": 24,
+                  "functionReturnParameters": 86,
+                  "id": 88,
                   "nodeType": "Return",
-                  "src": "329:12:0"
+                  "src": "806:12:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 26,
+            "id": 90,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getName",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "279:2:0"
+              "src": "757:2:0"
             },
             "returnParameters": {
-              "id": 22,
+              "id": 86,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 21,
+                  "id": 85,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26,
-                  "src": "303:13:0",
+                  "scope": 90,
+                  "src": "781:13:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -712,10 +2880,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 20,
+                    "id": 84,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "303:6:0",
+                    "src": "781:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -725,28 +2893,355 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "302:15:0"
+              "src": "780:15:0"
             },
-            "scope": 27,
-            "src": "263:86:0",
+            "scope": 117,
+            "src": "741:84:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "909:99:0",
+              "statements": [
+                {
+                  "assignments": [
+                    102
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 102,
+                      "name": "_spore",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 115,
+                      "src": "919:19:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                        "typeString": "struct Hyphae.Spore"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 101,
+                        "name": "Spore",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 15,
+                        "src": "919:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Spore_$15_storage_ptr",
+                          "typeString": "struct Hyphae.Spore"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 106,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 103,
+                      "name": "spores",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "941:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Spore_$15_storage_$dyn_storage",
+                        "typeString": "struct Hyphae.Spore storage ref[] storage ref"
+                      }
+                    },
+                    "id": 105,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 104,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 92,
+                      "src": "948:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "941:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Spore_$15_storage",
+                      "typeString": "struct Hyphae.Spore storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "919:35:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 107,
+                          "name": "_spore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "972:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "id": 108,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "r",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 10,
+                        "src": "972:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 109,
+                          "name": "_spore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "982:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "id": 110,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "g",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 12,
+                        "src": "982:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 111,
+                          "name": "_spore",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "992:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Spore_$15_memory_ptr",
+                            "typeString": "struct Hyphae.Spore memory"
+                          }
+                        },
+                        "id": 112,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "b",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 14,
+                        "src": "992:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "id": 113,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "971:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint8_$_t_uint8_$_t_uint8_$",
+                      "typeString": "tuple(uint8,uint8,uint8)"
+                    }
+                  },
+                  "functionReturnParameters": 100,
+                  "id": 114,
+                  "nodeType": "Return",
+                  "src": "964:37:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 116,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSpore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 92,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "849:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "849:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "848:12:0"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 95,
+                  "name": "r",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "882:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 94,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "882:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 97,
+                  "name": "g",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "891:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 96,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "891:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 99,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "900:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "881:27:0"
+            },
+            "scope": 117,
+            "src": "831:177:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 28,
-        "src": "92:260:0"
+        "scope": 118,
+        "src": "135:875:0"
       }
     ],
-    "src": "0:352:0"
+    "src": "0:1010:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.10",
-  "updatedAt": "2019-07-07T04:23:31.826Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-08T01:41:44.293Z",
   "devdoc": {
     "methods": {
       "isOwner()": {
