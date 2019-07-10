@@ -37,6 +37,7 @@ contract Mycelium is Ownable {
 
     function setToad(uint8 _index, address _address) public {
         toads[_index] = _address;
+        lastToad = _index;
     }
 
 }
