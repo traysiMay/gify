@@ -37,4 +37,8 @@ contract Toadstool is ERC721, Ownable {
         return shrooms.length;
     }
 
+    function sayMeepo() public view returns (uint8) {
+        return 1;
+    }
+
 }

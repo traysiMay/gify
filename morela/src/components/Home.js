@@ -6,6 +6,7 @@ import Toadstool from "../contracts/Toadstool.json";
 export const Home = () => {
   const { drizzle, drizzleState } = useContext(DrizzleContext.Context);
   const [shroomArray, setShroomArray] = useState([]);
+  const [sporeArray, setSporeArray] = useState([]);
 
   const hyphaeIndex = 0;
   const toadstoolIndex = 0;
@@ -33,7 +34,11 @@ export const Home = () => {
 
   let toadstool;
   useEffect(() => {
-    if (!drizzle.contracts.Toadstool) return;
+    if (
+      !drizzle.contracts.Toadstool ||
+      !drizzleState.contracts.Toadstool.synced
+    )
+      return;
     toadstool = drizzle.contracts.Toadstool;
     const createShroomArray = async () => {
       const shroomLength = await toadstool.methods.getShroomsLength().call();
@@ -47,9 +52,25 @@ export const Home = () => {
     createShroomArray();
   }, [drizzleState]);
 
+  let hyphae;
+  useEffect(() => {
+    if (!drizzle.contracts.Hyphae || !drizzleState.contracts.Hyphae.synced)
+      return;
+    hyphae = drizzle.contracts.Hyphae;
+    const getSpore = async () => {
+      const sArray = [];
+      for (let i = 0; i < 30; i++) {
+        const spore = await hyphae.methods.getSpore(i).call();
+        sArray.push(spore);
+      }
+      setSporeArray(sArray);
+    };
+    getSpore();
+  }, [drizzleState]);
+
   return (
     <div>
-      <ThreeScape shroomArray={shroomArray} />
+      <ThreeScape shroomArray={shroomArray} sporeArray={sporeArray} />
     </div>
   );
 };
