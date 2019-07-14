@@ -1,7 +1,9 @@
 import React, { Fragment, useContext } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { Home } from "../components/Home";
 import DrizzleContext from "../state/Context";
+import User from "../components/User";
+import Nav from "./Nav";
 const Routes = () => {
   const { initialized, drizzleState } = useContext(DrizzleContext.Context);
   return (
@@ -10,9 +12,9 @@ const Routes = () => {
         <div>loading</div>
       ) : (
         <Fragment>
-          <Link to="/driz">driz</Link>
-          <Link to="/">hOAM</Link>
+          <Nav />
           <Route exact path="/" component={Home} />
+          <Route exact path="/user" component={User} />
         </Fragment>
       )}
       }

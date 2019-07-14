@@ -1,7 +1,6 @@
 import React from "react";
 import { Drizzle, generateStore } from "drizzle";
 import Context from "./Context";
-import Toadstool from "../contracts/Toadstool.json";
 import Mycelium from "../contracts/Mycelium.json";
 const options = {
   contracts: [Mycelium],

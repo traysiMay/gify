@@ -3,6 +3,7 @@ import DrizzleContext from "../state/Context";
 import ThreeScape from "./ThreeScape";
 import Hyphae from "../contracts/Hyphae.json";
 import Toadstool from "../contracts/Toadstool.json";
+
 export const Home = () => {
   const { drizzle, drizzleState } = useContext(DrizzleContext.Context);
   const [shroomArray, setShroomArray] = useState([]);
@@ -30,16 +31,16 @@ export const Home = () => {
       });
     };
     initContracts();
+    // eslint-disable-next-line
   }, []);
 
-  let toadstool;
   useEffect(() => {
     if (
       !drizzle.contracts.Toadstool ||
       !drizzleState.contracts.Toadstool.synced
     )
       return;
-    toadstool = drizzle.contracts.Toadstool;
+    const toadstool = drizzle.contracts.Toadstool;
     const createShroomArray = async () => {
       const shroomLength = await toadstool.methods.getShroomsLength().call();
       const sArray = [];
@@ -50,13 +51,12 @@ export const Home = () => {
       setShroomArray(sArray);
     };
     createShroomArray();
-  }, [drizzleState]);
+  }, [drizzleState, drizzle.contracts.Toadstool]);
 
-  let hyphae;
   useEffect(() => {
     if (!drizzle.contracts.Hyphae || !drizzleState.contracts.Hyphae.synced)
       return;
-    hyphae = drizzle.contracts.Hyphae;
+    const hyphae = drizzle.contracts.Hyphae;
     const getSpore = async () => {
       const sArray = [];
       for (let i = 0; i < 30; i++) {
@@ -66,7 +66,7 @@ export const Home = () => {
       setSporeArray(sArray);
     };
     getSpore();
-  }, [drizzleState]);
+  }, [drizzleState, drizzle.contracts.Hyphae]);
 
   return (
     <div>
