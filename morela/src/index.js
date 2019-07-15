@@ -5,15 +5,18 @@ import Provider from "./state/Provider";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
 import ThreeProvider from "./state/ThreeProvider";
+import UserProvider from "./state/UserProvider";
 
 ReactDOM.render(
-  <ThreeProvider>
-    <Provider>
-      <Router>
-        <Routes />
-      </Router>
-    </Provider>
-  </ThreeProvider>,
+  <UserProvider>
+    <ThreeProvider>
+      <Provider>
+        <Router>
+          <Routes />
+        </Router>
+      </Provider>
+    </ThreeProvider>
+  </UserProvider>,
   document.getElementById("root")
 );
 
