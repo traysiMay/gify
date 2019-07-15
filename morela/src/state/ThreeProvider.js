@@ -6,7 +6,7 @@ const defaultCamera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
   0.1,
-  1000
+  10000
 );
 const scene = new THREE.Scene();
 const camera = defaultCamera;
@@ -26,6 +26,11 @@ const ThreeProvider = ({ children }) => {
   const objArray = useRef([]);
   const updateObjArray = () => {
     return objArray;
+  };
+
+  const shroomsShown = useRef([]);
+  const getShroomsShown = () => {
+    return shroomsShown;
   };
 
   const caughtSpores = useRef([]);
@@ -48,8 +53,8 @@ const ThreeProvider = ({ children }) => {
     firstClick.current = true;
   };
 
-  window.addEventListener("mousedown", mouseClick, false);
-  window.addEventListener("touchstart", mouseClick, false);
+  window.addEventListener("mouseup", mouseClick, false);
+  window.addEventListener("touchend", mouseClick, false);
 
   function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -70,25 +75,15 @@ const ThreeProvider = ({ children }) => {
 
   const cancelAnimator = () => {
     window.cancelAnimationFrame(myReq);
+    updateCaughtSpores();
     window.removeEventListener("mousedown", mouseClick, false);
   };
 
-  const exploder = () => {
-    for (let i = 0; i < explosionRef.current.length; i++) {
-      const o = explosionRef.current[i];
-      o.scale.x = 10 * Math.sin(o.internalTimer);
-      o.scale.y = 10 * Math.sin(o.internalTimer);
-      o.scale.z = 10 * Math.sin(o.internalTimer);
-      o.material.opacity -= 0.01;
-      o.internalTimer += 1;
-      if (o.material.opacity < 0) {
-        explosionRef.current.splice(i, 1);
-      }
-    }
-  };
+  const exploder = () => {};
 
   const animator = innerFunction => {
     const animate = () => {
+      let time = Date.now() * 0.0001;
       myReq = requestAnimationFrame(animate);
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObjects(scene.children);
@@ -96,17 +91,24 @@ const ThreeProvider = ({ children }) => {
         for (let i = 0; i < intersects.length; i++) {
           const iObj = intersects[i].object;
           iObj.material.color = { r: 255, g: 0, b: 255 };
-          console.log(iObj.sporeId);
-          if (!caughtSpores.current.includes(iObj.sporeId)) {
-            iObj.internalTimer = 1;
-            caughtSpores.current.push(iObj.sporeId);
+          if (!caughtSpores.current.includes(iObj)) {
+            caughtSpores.current.push(iObj);
             explosionRef.current.push(iObj);
-            updateCaughtSpores();
           }
         }
       }
-
-      exploder();
+      for (let i = 0; i < explosionRef.current.length; i++) {
+        const o = explosionRef.current[i];
+        o.scale.x += Math.sin(time * 0.001);
+        o.scale.y += Math.sin(time * 0.001);
+        o.scale.z += Math.sin(time * 0.001);
+        o.material.opacity -= 0.01;
+        o.internalTimer += 1;
+        if (o.material.opacity < 0) {
+          explosionRef.current.splice(i, 1);
+        }
+      }
+      // exploder();
       mouse.x = 99999;
       mouse.y = 99999;
       if (controls) controls.update();
@@ -125,11 +127,13 @@ const ThreeProvider = ({ children }) => {
         controls,
         container,
         getCaughtSpores,
+        getShroomsShown,
         objArray,
         mouse,
         raycaster,
         renderer,
         scene,
+        shroomsShown,
         // setCamera,
         // setControls,
         // setMouse,

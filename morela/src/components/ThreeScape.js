@@ -16,8 +16,10 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
     container,
     animator,
     getCaughtSpores,
+    getShroomsShown,
     objArray,
     raycaster,
+    shroomsShown,
     mouse
   } = useContext(ThreeContext);
   const loadNewShroom = async (shroom, i) => {
@@ -25,8 +27,11 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
     await loader.load("./blacky.json", async obj => {
       obj.children[0].material.color = shroom;
       obj.position.x += i / 2;
+      obj.position.y += i / 2;
+      obj.position.z += i / 2;
       scene.add(obj);
       objArray.current.push(obj);
+      shroomsShown.current.push(shroom.id);
     });
   };
 
@@ -34,10 +39,14 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
     () => {
       if (shroomArray.length === undefined) return;
       if (shroomRefs.current.length === shroomArray.length) return;
+      const sShown = getShroomsShown();
       for (let i = shroomRefs.current.length; i < shroomArray.length; i++) {
-        loadNewShroom(shroomArray[i], i);
+        if (!sShown.current.includes(shroomArray[i].id)) {
+          loadNewShroom(shroomArray[i], i);
+        }
       }
       shroomRefs.current = shroomArray;
+      console.log(shroomRefs.current);
       console.log("shroomeffect", scene);
     },
     // eslint-disable-next-line
@@ -53,7 +62,6 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
     });
 
     const caughtSpores = getCaughtSpores();
-    console.log(caughtSpores, sporeArray);
     if (caughtSpores.length === 0) {
       for (let i = sporeRefs.current.length; i < sporeArray.length; i++) {
         const sphere = new THREE.Mesh(geometry.clone(), material.clone());
@@ -61,6 +69,7 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
         sphere.material.opacity = Math.random();
         sphere.position.z = Math.random() * 12 - 5;
         sphere.sporeId = i;
+        sphere.bData = sporeArray[i];
         scene.add(sphere);
         objArray.current.push(sphere);
         sporeRefs.current = sporeArray;
@@ -70,7 +79,6 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
 
   useEffect(() => {
     console.log("scene effect", scene);
-    console.log(container);
     container.current.style.display = "block";
     document.querySelector("canvas").style.display = "block";
     camera.position.set(0, 1, -10);
@@ -88,30 +96,35 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
           sphere.position.y = 10 * Math.sin(timer + i * 1.1);
 
           // need some sort of random motion?
-          // const a = 5000;
-          // const p = 1;
-          // const v = 0.002;
-          // objArray[i].position.y = a * Math.sin(Date.now() * Math.PI * v) * p;
-          // objArray[i].position.x = a * Math.sin(Date.now() * Math.PI * v) * p;
+          const a = 15;
+          const p = 1;
+          const v = 0.02;
+          // objArray[i].position.y += a * Math.sin(Date.now() * Math.PI * v) * p;
+          // objArray[i].position.x += a * Math.sin(Date.now() * Math.PI * v) * p;
           // objArray[i].position.z =
           //   a * Math.sin(Date.now() * Math.PI * v) + i * p;
-          // objArray[i].scale.y +=
-          //   0.01 * Math.sin(Date.now() * Math.PI * 0.00001);
-          // objArray[i].scale.x +=
-          //   0.001 * Math.sin(Date.now() * Math.PI * 0.0001) * i;
+          objArray[i].scale.y +=
+            0.01 * Math.sin(Date.now() * Math.PI * 0.00001);
+          objArray[i].scale.x +=
+            0.01 * Math.sin(Date.now() * Math.PI * 0.0001) * i;
+
+          objArray[i].rotation.y +=
+            0.01 * Math.sin(Date.now() * Math.PI * 0.00001);
+          objArray[i].rotation.x +=
+            0.01 * Math.sin(Date.now() * Math.PI * 0.0001) * i;
         }
       }
-      const intersects = raycaster.intersectObjects(scene.children);
-      // if (firstClick.current) {
-      for (let i = 0; i < intersects.length; i++) {
-        const iObj = intersects[i].object;
-        iObj.material.color = { r: 255, g: 0, b: 255 };
-        // if (!caughtSpores.current.includes(iObj.sporeId)) {
-        //   caughtSpores.current.push(iObj.sporeId);
-        //   // updateCaughtSpores();
-        // }
-        // }
-      }
+      // const intersects = raycaster.intersectObjects(scene.children);
+      // // if (firstClick.current) {
+      // for (let i = 0; i < intersects.length; i++) {
+      //   const iObj = intersects[i].object;
+      //   iObj.material.color = { r: 255, g: 0, b: 255 };
+      //   // if (!caughtSpores.current.includes(iObj.sporeId)) {
+      //   //   caughtSpores.current.push(iObj.sporeId);
+      //   //   // updateCaughtSpores();
+      //   // }
+      //   // }
+      // }
       mouse.x = 99999;
       mouse.y = 99999;
     };

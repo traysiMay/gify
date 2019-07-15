@@ -11,7 +11,7 @@ export const Home = () => {
 
   const hyphaeIndex = 0;
   const toadstoolIndex = 0;
-
+  console.log("HOME");
   useEffect(() => {
     const initContracts = async () => {
       const hyphaeAddress = await drizzle.contracts.Mycelium.methods

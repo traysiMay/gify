@@ -28,9 +28,9 @@ contract Toadstool is ERC721, Ownable {
         return _shroomId;
     }
 
-    function getShroom(uint _shroomId) public view returns (uint8 r, uint8 g, uint8 b) {
+    function getShroom(uint _shroomId) public view returns (uint8 r, uint8 g, uint8 b, uint id) {
         Shroom memory _shroom = shrooms[_shroomId];
-        return (_shroom.r, _shroom.g, _shroom.b);
+        return (_shroom.r, _shroom.g, _shroom.b, _shroomId);
     }
 
     function getShroomsLength() public view returns (uint) {

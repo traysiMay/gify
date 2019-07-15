@@ -22,7 +22,6 @@ const LinkContainer = styled.div`
 `;
 
 export const Nav = () => {
-  console.log("why twice");
   return (
     <Fragment>
       <LinkContainer>
