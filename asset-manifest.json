@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/gify/static/js/main.8cabbd08.chunk.js",
-    "main.js.map": "/gify/static/js/main.8cabbd08.chunk.js.map",
-    "runtime~main.js": "/gify/static/js/runtime~main.e4abff08.js",
-    "runtime~main.js.map": "/gify/static/js/runtime~main.e4abff08.js.map",
-    "static/js/2.ca0f3ef6.chunk.js": "/gify/static/js/2.ca0f3ef6.chunk.js",
-    "static/js/2.ca0f3ef6.chunk.js.map": "/gify/static/js/2.ca0f3ef6.chunk.js.map",
-    "index.html": "/gify/index.html",
-    "precache-manifest.8848cee75fb6616eb65221520b6e139e.js": "/gify/precache-manifest.8848cee75fb6616eb65221520b6e139e.js",
-    "service-worker.js": "/gify/service-worker.js"
+    "main.js": "/static/js/main.f0b553f0.chunk.js",
+    "main.js.map": "/static/js/main.f0b553f0.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.0a28e044.chunk.js": "/static/js/2.0a28e044.chunk.js",
+    "static/js/2.0a28e044.chunk.js.map": "/static/js/2.0a28e044.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.417d2b0a8407044850b019f8af639572.js": "/precache-manifest.417d2b0a8407044850b019f8af639572.js",
+    "service-worker.js": "/service-worker.js"
   }
 }
