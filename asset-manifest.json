@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/gify/static/js/main.19081575.chunk.js",
-    "main.js.map": "/gify/static/js/main.19081575.chunk.js.map",
+    "main.js": "/gify/static/js/main.8cabbd08.chunk.js",
+    "main.js.map": "/gify/static/js/main.8cabbd08.chunk.js.map",
     "runtime~main.js": "/gify/static/js/runtime~main.e4abff08.js",
     "runtime~main.js.map": "/gify/static/js/runtime~main.e4abff08.js.map",
-    "static/js/2.a9240aad.chunk.js": "/gify/static/js/2.a9240aad.chunk.js",
-    "static/js/2.a9240aad.chunk.js.map": "/gify/static/js/2.a9240aad.chunk.js.map",
+    "static/js/2.ca0f3ef6.chunk.js": "/gify/static/js/2.ca0f3ef6.chunk.js",
+    "static/js/2.ca0f3ef6.chunk.js.map": "/gify/static/js/2.ca0f3ef6.chunk.js.map",
     "index.html": "/gify/index.html",
-    "precache-manifest.bfaed2580653dcf7e7d7f63628853552.js": "/gify/precache-manifest.bfaed2580653dcf7e7d7f63628853552.js",
+    "precache-manifest.8848cee75fb6616eb65221520b6e139e.js": "/gify/precache-manifest.8848cee75fb6616eb65221520b6e139e.js",
     "service-worker.js": "/gify/service-worker.js"
   }
 }
