@@ -2,8 +2,9 @@
   "name": "morela",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://traysimay.github.io/gify",
+  "homepage": "http://shroom.raptor.pizza/",
   "dependencies": {
+    "chroma-js": "^2.0.4",
     "drizzle": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

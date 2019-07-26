@@ -26,7 +26,7 @@ export const Nav = () => {
     <Fragment>
       <LinkContainer>
         <LinkWrapper>
-          <StyledLink to="/user">
+          <StyledLink to="/duser">
             <AliceProfile />
           </StyledLink>
         </LinkWrapper>

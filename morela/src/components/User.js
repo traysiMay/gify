@@ -49,15 +49,16 @@ const ColorCircle = styled.div`
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background: ${props =>
-    `rgb(${props.color[0]}, ${props.color[1]}, ${props.color[2]})`};
+  /* background: ${props =>
+    `rgb(${props.color[0]}, ${props.color[1]}, ${props.color[2]})`}; */
+    background: ${props => `${props.color}`};
 `;
 
-export const User = () => {
+const COLOR_PALETTE = ["#2d3561", "#c05c7e", "#f3826f", "#ffb961"];
+const User = () => {
   const [checkedSpores, setCheckedSpores] = useState([]);
   const { spores } = useContext(UserContext);
   const { drizzle, drizzleState } = useContext(DrizzleContext.Context);
-  console.log(spores);
 
   const onChange = e => {
     const sporeId = parseInt(e.target.id.replace("check-", ""));
@@ -114,7 +115,8 @@ export const User = () => {
           <SporeRow key={"spore" + i}>
             <input id={`check-${r.id}`} onChange={onChange} type="checkbox" />
             <div>{r.id}</div>
-            <ColorCircle color={[r.bData.r, r.bData.g, r.bData.b]} />
+            {/* <ColorCircle color={[r.bData.r, r.bData.g, r.bData.b]} /> */}
+            <ColorCircle color={COLOR_PALETTE[i]} />
           </SporeRow>
         ))}
       <TransmuteButton onClick={Transhroomtation}>TRANSMUTE</TransmuteButton>

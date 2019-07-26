@@ -12,6 +12,7 @@ const scene = new THREE.Scene();
 const camera = defaultCamera;
 const renderer = new THREE.WebGLRenderer(document.getElementById("screen"));
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.autoRotate = true;
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -44,7 +45,7 @@ const ThreeProvider = ({ children }) => {
   const mouseClick = event => {
     let x = event.clientX;
     let y = event.clientY;
-    if (event.touches) {
+    if (event.touches && event.touches.length > 0) {
       x = event.touches[0].clientX;
       y = event.touches[0].clientY;
     }
@@ -54,9 +55,10 @@ const ThreeProvider = ({ children }) => {
   };
 
   window.addEventListener("mouseup", mouseClick, false);
-  window.addEventListener("touchend", mouseClick, false);
+  window.addEventListener("touchstart", mouseClick, false);
 
   function onWindowResize() {
+    console.log("resize");
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);

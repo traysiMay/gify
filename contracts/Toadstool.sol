@@ -13,22 +13,29 @@ contract Toadstool is ERC721, Ownable {
     }
 
     struct Shroom {
+        uint r;
+        uint g;
+        uint b;
+    }
+
+    Shroom[] shrooms;
+
+    struct Spore {
         uint8 r;
         uint8 g;
         uint8 b;
     }
 
-    Shroom[] shrooms;
+    Spore[] spores;
 
-    function mint(uint8 _r, uint8  _g, uint8  _b) public onlyOwner returns (uint) {
+    function mint(uint _r, uint  _g, uint  _b) public onlyOwner {
         Shroom memory _shroom = Shroom({r: _r, g: _g, b: _b});
         uint _shroomId = shrooms.push(_shroom) - 1;
 
         _mint(msg.sender, _shroomId);
-        return _shroomId;
     }
 
-    function getShroom(uint _shroomId) public view returns (uint8 r, uint8 g, uint8 b, uint id) {
+    function getShroom(uint _shroomId) public view returns (uint r, uint g, uint b, uint id) {
         Shroom memory _shroom = shrooms[_shroomId];
         return (_shroom.r, _shroom.g, _shroom.b, _shroomId);
     }
@@ -37,8 +44,18 @@ contract Toadstool is ERC721, Ownable {
         return shrooms.length;
     }
 
-    function sayMeepo() public view returns (uint8) {
-        return 1;
+    function getSpore(uint _index) public view returns (uint8 r, uint8 g, uint8 b) {
+        Spore memory _spore = spores[_index];
+        return (_spore.r, _spore.g, _spore.b);
+    }
+
+    function makeSpore(uint8 _r, uint8 _g, uint8 _b) public onlyOwner {
+        Spore memory _spore = Spore({r:_r,g:_g,b:_b});
+        spores.push(_spore);
+    }
+
+    function getSporeLength() public view returns (uint) {
+        return spores.length;
     }
 
 }

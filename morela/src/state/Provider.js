@@ -7,11 +7,11 @@ const options = {
   web3: {
     fallback: {
       type: "ws",
-      url: "ws://127.0.0.1:8545"
+      url: "wss://ropsten.infura.io/ws"
     }
   }
 };
-
+// wss://ropsten.infura.io/ws
 const drizzleStore = generateStore(options);
 const drizzle = new Drizzle(options, drizzleStore);
 

@@ -30,7 +30,7 @@ contract Mycelium is Ownable {
     }
 
     // needs to have an index
-    function mintToad(uint8 r, uint8 g, uint8 b) public {
+    function mintToad(uint r, uint g, uint b) public {
         Toadstool toad = Toadstool(toads[0]);
         toad.mint(r,g,b);
     }
