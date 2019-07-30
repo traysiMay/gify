@@ -30,10 +30,6 @@ contract Hyphae is Ownable{
         }
     }
 
-    function getName() public view returns (string memory) {
-        return name;
-    }
-
     function getSpore(uint _index) public view returns (uint8 r, uint8 g, uint8 b) {
         Spore memory _spore = spores[_index];
         return (_spore.r, _spore.g, _spore.b);
