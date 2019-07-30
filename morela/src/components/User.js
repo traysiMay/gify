@@ -1,21 +1,21 @@
-import React, { useContext, useState } from 'react'
-import DrizzleContext from '../state/Context'
-import UserContext from '../state/UserContext'
-import styled from 'styled-components'
+import React, { useContext, useState } from "react";
+import DrizzleContext from "../state/Context";
+import UserContext from "../state/UserContext";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 20% 1fr 20%;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   justify-content: center;
-`
+`;
 
 const Header = styled.h1`
   grid-column-start: 2;
   text-align: center;
   font-size: 60px;
-`
+`;
 
 const SporeRow = styled.div`
   grid-column-start: 2;
@@ -30,7 +30,7 @@ const SporeRow = styled.div`
   input {
     margin: auto;
   }
-`
+`;
 
 const TransmuteButton = styled.div`
   grid-column-start: 2;
@@ -43,7 +43,7 @@ const TransmuteButton = styled.div`
   text-align: center;
   cursor: pointer;
   user-select: none;
-`
+`;
 
 const ColorCircle = styled.div`
   border-radius: 50%;
@@ -52,48 +52,46 @@ const ColorCircle = styled.div`
   /* background: ${props =>
     `rgb(${props.color[0]}, ${props.color[1]}, ${props.color[2]})`}; */
     background: ${props => `${props.color}`};
-`
+`;
 
-const COLOR_PALETTE = ['#2d3561', '#c05c7e', '#f3826f', '#ffb961']
+const COLOR_PALETTE = ["#2d3561", "#c05c7e", "#f3826f", "#ffb961"];
 const User = () => {
-  const [checkedSpores, setCheckedSpores] = useState([])
-  const { spores } = useContext(UserContext)
-  const { drizzle, drizzleState } = useContext(DrizzleContext.Context)
+  const [checkedSpores, setCheckedSpores] = useState([]);
+  const { spores } = useContext(UserContext);
+  const { drizzle, drizzleState } = useContext(DrizzleContext.Context);
 
   const onChange = e => {
-    const sporeId = parseInt(e.target.id.replace('check-', ''))
+    const sporeId = parseInt(e.target.id.replace("check-", ""));
     if (e.target.checked) {
-      const checkedSpore = spores[0].filter(s => s.id === sporeId)[0]
-      setCheckedSpores([...checkedSpores, checkedSpore])
+      const checkedSpore = spores[0].filter(s => s.id === sporeId)[0];
+      setCheckedSpores([...checkedSpores, checkedSpore]);
     } else {
-      setCheckedSpores(checkedSpores.filter((s, i) => s.id !== sporeId))
+      setCheckedSpores(checkedSpores.filter((s, i) => s.id !== sporeId));
     }
-  }
+  };
 
   const Transhroomtation = () => {
-    const colorArray = checkedSpores.map(s => s.bData)
+    const colorArray = checkedSpores.map(s => s.bData);
 
     const reducedColors = colorArray.reduce(
       (allColors, obj) => {
-        const redChannel = parseInt(allColors.r) + parseInt(obj.r)
-        const blueChannel = parseInt(allColors.b) + parseInt(obj.b)
-        const greenChannel = parseInt(allColors.g) + parseInt(obj.g)
+        const redChannel = parseInt(allColors.r) + parseInt(obj.r);
+        const blueChannel = parseInt(allColors.b) + parseInt(obj.b);
+        const greenChannel = parseInt(allColors.g) + parseInt(obj.g);
 
-        allColors.r = redChannel
-        allColors.g = greenChannel
-        allColors.b = blueChannel
-        return allColors
+        allColors.r = redChannel;
+        allColors.g = greenChannel;
+        allColors.b = blueChannel;
+        return allColors;
       },
-      { r: 0, g: 0, b: 0 },
-    )
+      { r: 0, g: 0, b: 0 }
+    );
 
-    const pKey =
-      '0x' +
-      'beac553814373bee4735f6dffe1ecbf6f4d37e8248a58ad91885f4f9fe384dcd'.toUpperCase()
-    const account = drizzle.web3.eth.accounts.privateKeyToAccount(pKey)
-    drizzle.web3.eth.accounts.wallet.add(account)
-    drizzle.web3.eth.defaultAccount = account.address
-    const mycelium = drizzle.contracts.Mycelium
+    const pKey = "0x" + process.env.REACT_APP_PKEY.toUpperCase();
+    const account = drizzle.web3.eth.accounts.privateKeyToAccount(pKey);
+    drizzle.web3.eth.accounts.wallet.add(account);
+    drizzle.web3.eth.defaultAccount = account.address;
+    const mycelium = drizzle.contracts.Mycelium;
     const tx = mycelium.methods.mintToad.cacheSend(
       0,
       reducedColors.r,
@@ -102,18 +100,18 @@ const User = () => {
       {
         from: drizzle.web3.eth.defaultAccount,
         gas: 750000,
-        gasPrice: drizzle.web3.utils.toWei('300', 'gwei'),
-      },
-    )
-    console.log(tx)
-  }
+        gasPrice: drizzle.web3.utils.toWei("300", "gwei")
+      }
+    );
+    console.log(tx);
+  };
 
   return (
     <Container>
       <Header>PROFILE</Header>
       {spores.length > 0 &&
         spores[0].map((r, i) => (
-          <SporeRow key={'spore' + i}>
+          <SporeRow key={"spore" + i}>
             <input id={`check-${r.id}`} onChange={onChange} type="checkbox" />
             <div>{r.id}</div>
             {/* <ColorCircle color={[r.bData.r, r.bData.g, r.bData.b]} /> */}
@@ -122,7 +120,7 @@ const User = () => {
         ))}
       <TransmuteButton onClick={Transhroomtation}>TRANSMUTE</TransmuteButton>
     </Container>
-  )
-}
+  );
+};
 
-export default User
+export default User;
