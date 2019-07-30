@@ -3,7 +3,7 @@
 Hello! Welcome to gify (гифы), which is the Russian word for hyphae -- the
 branching filaments that make up the mycelium of fungi.
 
-You can find the current demo @ https://shroom.raptor.pizza
+You can find the current demo deployed to Ropsten @ https://shroom.raptor.pizza
 
 Background:
 
