@@ -21,10 +21,11 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 // const infuraKey = "fj4jll3k.....";
 //
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
-const mnemonic =
-  "thought only exercise film glove merge use person symbol regular kidney first";
+const fs = require("fs");
+const mnemonic = fs
+  .readFileSync(".secret")
+  .toString()
+  .trim();
 
 module.exports = {
   contracts_build_directory: "./morela/src/contracts",
