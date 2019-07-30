@@ -5,7 +5,7 @@ import DrizzleContext from "../state/Context";
 import User from "../components/User";
 import DUser from "../components/DUser";
 import Nav from "./Nav";
-import ThreeProvider from "../state/ThreeProvider";
+import CheckoutMyShrooms from "../components/CheckoutMyShrooms";
 
 const Routes = () => {
   const { initialized, drizzleState } = useContext(DrizzleContext.Context);
@@ -16,12 +16,12 @@ const Routes = () => {
       ) : (
         <Fragment>
           <Nav />
+          <Route exact path="/checkout" component={CheckoutMyShrooms} />
           <Route exact path="/duser" component={DUser} />
           <Route exact path="/" component={Home} />
           <Route exact path="/user" component={User} />
         </Fragment>
       )}
-      }
     </div>
   );
 };

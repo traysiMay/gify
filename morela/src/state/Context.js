@@ -4,7 +4,6 @@ const Context = React.createContext();
 const Provider = ({ drizzle, children }) => {
   const [drizzleState, setDrizzleState] = useState(null);
   const [initialized, setInitialized] = useState(false);
-
   useEffect(() => {
     const drizzUnsub = drizzle.store.subscribe(() => {
       const drizzleState = drizzle.store.getState();

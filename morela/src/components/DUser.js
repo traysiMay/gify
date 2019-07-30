@@ -69,9 +69,9 @@ function hexToRgb(hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
+        r: parseInt(result[1], 16) / 255,
+        g: parseInt(result[2], 16) / 255,
+        b: parseInt(result[3], 16) / 255
       }
     : null;
 }
@@ -86,6 +86,7 @@ const DUser = () => {
     scene,
     camera,
     cancelAnimator,
+    clearObjects,
     container,
     animator,
     getCaughtSpores,
@@ -97,21 +98,20 @@ const DUser = () => {
   } = useContext(ThreeContext);
 
   const loadNewShroom = async (shroom, i) => {
+    if (objArray.current.length > 0) {
+      objArray.current[0].children[0].material.color = new THREE.Color(shroom);
+      return;
+    }
     const loader = new THREE.ObjectLoader();
-    await loader.load("./blacky.json", async obj => {
-      console.log(shroom);
-      obj.children[0].material.color = shroom;
-      // obj.position.x += i / 2;
-      // obj.position.y += i / 2;
-      // obj.position.z += i / 2;
+    await loader.load("./yellowDog.json", async obj => {
+      obj.children[0].material.color = new THREE.Color(shroom);
       scene.add(obj);
       objArray.current.push(obj);
-      shroomsShown.current.push(shroom.id);
+      // shroomsShown.current.push(shroom.id);
     });
   };
 
   const onChange = e => {
-    console.log(e.target);
     const sporeId = parseInt(e.target.id.replace("check-", ""));
     if (!checkedSpores.includes(sporeId)) {
       setCheckedSpores([...checkedSpores, sporeId]);
@@ -119,69 +119,54 @@ const DUser = () => {
       setCheckedSpores(checkedSpores.filter(s => s !== sporeId));
     }
   };
+
   const mix = () => {
     const colorz = checkedSpores.map(s => {
       const el = document.getElementById("check-" + s);
       const color = el.getAttribute("color");
-
-      return hexToRgb(color);
+      return color;
     });
+
     const colorArray = checkedSpores.map(s => s.bData);
-    const reducedColors = colorz.reduce(
-      (allCs, o, i) => {
-        if (i === 0) return o;
-        console.log(o, i);
-        const mixedColor = chroma.blend(allCs, o, "multiply");
-        return {
-          r: mixedColor._rgb[0] * 10,
-          g: mixedColor._rgb[1] * 10,
-          b: mixedColor._rgb[2] * 10
-        };
-      },
-      { r: 0, b: 0, g: 0 }
-    );
+    console.log(colorz);
+    const reducedColors = colorz.reduce((allCs, o, i) => {
+      if (i === 0) return o;
+      console.log(allCs, o);
+      const mixedColor = chroma.blend(allCs, o, "multiply").hex();
+      return mixedColor;
+    }, 0xffffff);
+    console.log(reducedColors);
     loadNewShroom(reducedColors);
   };
+
   const Transhroomtation = () => {
+    const color = objArray.current[0].children[0].material.color;
     setTransmuteText("TRANSMUTING...");
     setTimeout(() => setTransmuteText("TRANSMUTE"), 10000);
-    const colorz = checkedSpores.map(s => {
-      const el = document.getElementById("check-" + s);
-      const color = el.getAttribute("color");
-
-      return hexToRgb(color);
-    });
-    const colorArray = checkedSpores.map(s => s.bData);
-    const reducedColors = colorz.reduce(
-      (allCs, o, i) => {
-        if (i === 0) return o;
-        console.log(o, i);
-        const mixedColor = chroma.blend(allCs, o, "multiply");
-        return {
-          r: mixedColor._rgb[0] * 10,
-          g: mixedColor._rgb[1] * 10,
-          b: mixedColor._rgb[2] * 10
-        };
-      },
-      { r: 0, b: 0, g: 0 }
-    );
-    const pKey =
-      "0x" +
-      "C835422EC7427468E1C8A95B1BECE688E01DE481D26F66AEF672801EEE3AD875".toUpperCase();
-    const account = drizzle.web3.eth.accounts.privateKeyToAccount(pKey);
-    drizzle.web3.eth.accounts.wallet.add(account);
-    drizzle.web3.eth.defaultAccount = account.address;
     const mycelium = drizzle.contracts.Mycelium;
+
     const tx = mycelium.methods.mintToad.cacheSend(
-      reducedColors.r,
-      reducedColors.g,
-      reducedColors.b,
-      {
-        from: drizzle.web3.eth.defaultAccount,
-        gas: 750000,
-        gasPrice: drizzle.web3.utils.toWei("300", "gwei")
-      }
+      color.r * 255,
+      color.g * 255,
+      color.b * 255
     );
+
+    // const pKey =
+    //   "0x" +
+    //   "bd881c2a4da5ab0438ee834391bbc4810871bca704babae6d03d0c1a24841e88".toUpperCase();
+    // const account = drizzle.web3.eth.accounts.privateKeyToAccount(pKey);
+    // drizzle.web3.eth.accounts.wallet.add(account);
+    // drizzle.web3.eth.defaultAccount = account.address;
+    // const tx = mycelium.methods.mintToad.cacheSend(
+    //   color.r * 255,
+    //   color.g * 255,
+    //   color.b * 255,
+    //   {
+    //     from: drizzle.web3.eth.defaultAccount,
+    //     gas: 750000,
+    //     gasPrice: drizzle.web3.utils.toWei("300", "gwei")
+    //   }
+    // );
     console.log(tx);
   };
 
@@ -197,59 +182,42 @@ const DUser = () => {
   useEffect(() => {
     console.log("scene effect", scene);
     container.current.style.display = "block";
-    const canvas = document.querySelector("canvas");
-    canvas.style.display = "block";
-    canvas.style.height = window.innerHeight / 2 + "px";
-    canvas.style.width = "100%";
+    // const canvas = document.querySelector("canvas");
+    // canvas.style.display = "block";
+    // canvas.style.height = window.innerHeight / 2 + "px";
+    // canvas.style.width = "100%";
     camera.position.set(0, 1, -10);
-
-    var light = new THREE.AmbientLight("pink"); // soft white light
-    scene.add(light);
-    // this by nature can't be dynamic because I am a fucking dumb ass
+    clearObjects();
     const objLoop = o => {
       const objArray = o.current;
       if (objArray.length > 0) {
         for (let i = 0; i < objArray.length; i++) {
           var timer = 0.0001 * Date.now();
-          // const sphere = objArray[i];
-          // sphere.position.x = 10 * Math.cos(timer + i);
-          // sphere.position.y = 10 * Math.sin(timer + i * 1.1);
-
-          // // need some sort of random motion?
-          // const a = 15;
-          // const p = 1;
-          // const v = 0.02;
-
-          // objArray[i].scale.y +=
-          //   0.01 * Math.sin(Date.now() * Math.PI * 0.00001);
-          // objArray[i].scale.x +=
-          //   0.01 * Math.sin(Date.now() * Math.PI * 0.0001) * i;
-
-          // objArray[i].rotation.y +=
-          //   0.01 * Math.sin(Date.now() * Math.PI * 0.00001);
-          // objArray[i].rotation.x +=
-          //   0.01 * Math.sin(Date.now() * Math.PI * 0.0001) * i;
         }
       }
     };
     animator(objLoop);
-    loadNewShroom({ r: 10, g: 10, b: 100 });
-    return () => console.log("dismounted");
+    loadNewShroom({ r: 0, g: 0, b: 0 });
+    return () => {
+      scene.remove(objArray.current[0]);
+    };
     // eslint-disable-next-line
   }, [scene]);
 
   return (
-    <div>
+    <div
+      style={{
+        position: "absolute",
+        top: `${window.innerHeight - window.innerHeight / 2}px`,
+        width: "100%"
+      }}
+    >
       <Container>
-        {/* <Header>PROFILE</Header> */}
         {[0, 1, 2, 3].map((r, i) => (
           <SporeRow
             key={"spore" + i}
             className={checkedSpores.includes(i) ? "red" : "black"}
           >
-            {/* <input id={`check-${r.id}`} onChange={onChange} type="checkbox" />
-          <div>{r.id}</div> */}
-            {/* <ColorCircle color={[r.bData.r, r.bData.g, r.bData.b]} /> */}
             <ColorCircle
               onClick={onChange}
               id={`check-${i}`}

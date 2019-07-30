@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import AliceProfile from "../components/svg/AliceProfile";
-import ShroomHouse from "../components/svg/ShroomHouse";
+import Hypha from "../components/svg/Hypha";
+import SingleShroom from "../components/svg/SingleShroom";
 
 const StyledLink = styled(Link)`
   color: red;
@@ -19,6 +20,7 @@ const LinkContainer = styled.div`
   top: 10px;
   left: 10px;
   width: 150px;
+  z-index: 4;
 `;
 
 export const Nav = () => {
@@ -26,13 +28,18 @@ export const Nav = () => {
     <Fragment>
       <LinkContainer>
         <LinkWrapper>
-          <StyledLink to="/duser">
+          <StyledLink to="/checkout">
             <AliceProfile />
           </StyledLink>
         </LinkWrapper>
         <LinkWrapper>
+          <StyledLink to="/duser">
+            <Hypha />
+          </StyledLink>
+        </LinkWrapper>
+        <LinkWrapper>
           <StyledLink to="/">
-            <ShroomHouse />
+            <SingleShroom />
           </StyledLink>
         </LinkWrapper>
       </LinkContainer>

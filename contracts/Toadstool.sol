@@ -1,9 +1,9 @@
 pragma solidity ^0.5.0;
 
-import "openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
+import "openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
-contract Toadstool is ERC721, Ownable {
+contract Toadstool is ERC721Enumerable, Ownable {
     string public name;
     string public symbol;
 
@@ -13,9 +13,9 @@ contract Toadstool is ERC721, Ownable {
     }
 
     struct Shroom {
-        uint r;
-        uint g;
-        uint b;
+        uint8 r;
+        uint8 g;
+        uint8 b;
     }
 
     Shroom[] shrooms;
@@ -28,14 +28,20 @@ contract Toadstool is ERC721, Ownable {
 
     Spore[] spores;
 
-    function mint(uint _r, uint  _g, uint  _b) public onlyOwner {
+    mapping(uint32 => bool) takenColors;
+
+    function mint(uint8 _r, uint8  _g, uint8  _b, address forager) public onlyOwner {
+        uint32 colorCombined = _r + _g + _b;
+        require(takenColors[colorCombined] == false, 'this color is taken');
+
         Shroom memory _shroom = Shroom({r: _r, g: _g, b: _b});
         uint _shroomId = shrooms.push(_shroom) - 1;
-
-        _mint(msg.sender, _shroomId);
+        
+        takenColors[colorCombined] = true;
+        _mint(forager, _shroomId);
     }
 
-    function getShroom(uint _shroomId) public view returns (uint r, uint g, uint b, uint id) {
+    function getShroom(uint _shroomId) public view returns (uint8 r, uint8 g, uint8 b, uint id) {
         Shroom memory _shroom = shrooms[_shroomId];
         return (_shroom.r, _shroom.g, _shroom.b, _shroomId);
     }

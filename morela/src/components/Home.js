@@ -8,10 +8,9 @@ export const Home = () => {
   const { drizzle, drizzleState } = useContext(DrizzleContext.Context);
   const [shroomArray, setShroomArray] = useState([]);
   const [sporeArray, setSporeArray] = useState([]);
-
+  console.log(drizzle, drizzleState);
   const hyphaeIndex = 0;
   const toadstoolIndex = 0;
-  console.log("HOME");
   useEffect(() => {
     const initContracts = async () => {
       const hyphaeAddress = await drizzle.contracts.Mycelium.methods
@@ -35,11 +34,13 @@ export const Home = () => {
   }, []);
 
   useEffect(() => {
+    console.log(drizzle.contracts.Toadstool);
     if (
       !drizzle.contracts.Toadstool ||
       !drizzleState.contracts.Toadstool.synced
     )
       return;
+    console.log(drizzle);
     const toadstool = drizzle.contracts.Toadstool;
     const createShroomArray = async () => {
       const shroomLength = await toadstool.methods.getShroomsLength().call();

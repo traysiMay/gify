@@ -13,7 +13,8 @@ const camera = defaultCamera;
 const renderer = new THREE.WebGLRenderer(document.getElementById("screen"));
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
-
+const light = new THREE.AmbientLight("white"); // soft white light
+scene.add(light);
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
@@ -23,6 +24,14 @@ const ThreeProvider = ({ children }) => {
   const firstClick = useRef(false);
 
   const explosionRef = useRef([]);
+
+  const clearObjects = () => {
+    for (let i = 0; i < objArray.current.length; i++) {
+      scene.remove(objArray.current[i]);
+    }
+    objArray.current = [];
+    shroomsShown.current = [];
+  };
 
   const objArray = useRef([]);
   const updateObjArray = () => {
@@ -128,6 +137,7 @@ const ThreeProvider = ({ children }) => {
         cancelAnimator,
         controls,
         container,
+        clearObjects,
         getCaughtSpores,
         getShroomsShown,
         objArray,

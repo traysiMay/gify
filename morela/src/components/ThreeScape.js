@@ -25,9 +25,11 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
   } = useContext(ThreeContext);
   const loadNewShroom = async (shroom, i) => {
     const loader = new THREE.ObjectLoader();
-    await loader.load("./blacky.json", async obj => {
-      console.log(shroom);
-      obj.children[0].material.color = shroom;
+    await loader.load("./yellowDog.json", async obj => {
+      const { r, g, b } = shroom;
+      obj.children[0].material.color = new THREE.Color(`rgb(${r},${g},${b})`);
+      obj.children[2].material.color = new THREE.Color(`rgb(${r},${g},${b})`);
+
       obj.position.x += i / 2;
       obj.position.y += i / 2;
       obj.position.z += i / 2;
@@ -48,7 +50,6 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
         }
       }
       shroomRefs.current = shroomArray;
-      console.log(shroomRefs.current);
       console.log("shroomeffect", scene);
     },
     // eslint-disable-next-line
@@ -63,24 +64,26 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
       transparent: true
     });
 
-    const caughtSpores = getCaughtSpores();
-    if (caughtSpores.length === 0) {
-      for (let i = sporeRefs.current.length; i < sporeArray.length; i++) {
-        const sphere = new THREE.Mesh(geometry.clone(), material.clone());
-        const randomColor = chroma.random();
-        sphere.material.color = new THREE.Color(chroma.random());
-        // sphere.material.color = sporeArray[i];
+    // const caughtSpores = getCaughtSpores();
+    // if (caughtSpores.length === 0) {
 
-        sphere.material.opacity = Math.random();
-        sphere.position.z = Math.random() * 12 - 5;
-        sphere.sporeId = i;
-        sphere.bData = sporeArray[i];
-        scene.add(sphere);
-        objArray.current.push(sphere);
-        sporeRefs.current = sporeArray;
-      }
+    for (let i = sporeRefs.current.length; i < sporeArray.length; i++) {
+      console.log("spore loop");
+      const sphere = new THREE.Mesh(geometry.clone(), material.clone());
+      const randomColor = chroma.random();
+      sphere.material.color = new THREE.Color(chroma.random());
+      // sphere.material.color = sporeArray[i];
+
+      sphere.material.opacity = Math.random();
+      sphere.position.z = Math.random() * 12 - 5;
+      sphere.sporeId = i;
+      sphere.bData = sporeArray[i];
+      scene.add(sphere);
+      objArray.current.push(sphere);
+      sporeRefs.current = sporeArray;
     }
-  });
+    // }
+  }, [sporeArray]);
 
   useEffect(() => {
     console.log("scene effect", scene);
@@ -89,9 +92,8 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
     camera.position.set(0, 1, -20);
     window.camera = camera;
 
-    var light = new THREE.AmbientLight("pink"); // soft white light
-    scene.add(light);
-    // this by nature can't be dynamic because I am a fucking dumb ass
+    // var light = new THREE.AmbientLight("white"); // soft white light
+    // scene.add(light);
     const objLoop = o => {
       const objArray = o.current;
       if (objArray.length > 0) {
@@ -148,12 +150,14 @@ export const ThreeScape = ({ shroomArray, sporeArray }) => {
     // );
     return () => {
       console.log("dismount");
-      document.querySelector("canvas").style.display = "none";
+      // document.querySelector("canvas").style.display = "none";
       cancelAnimator();
     };
     // eslint-disable-next-line
   }, []);
-  return <div>{JSON.stringify(userContext.spores)}</div>;
+  return (
+    <div style={{ display: "none" }}>{JSON.stringify(userContext.spores)}</div>
+  );
 };
 
 export default ThreeScape;

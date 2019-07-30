@@ -3,19 +3,12 @@ import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "./Hyphae.sol";
 import "./Toadstool.sol";
 
-
-// Executive controls
 contract Mycelium is Ownable {
 
     mapping(uint8 => address) public hyphaes;
     mapping(uint8 => address) public toads;
     uint8 private lastHyphae;
     uint private lastToad;
-
-    constructor() public {
-        createHyphae(0, "genesis");
-        lastHyphae = 0;
-    }
 
     function createHyphae(uint8 _index, string memory _name) public onlyOwner returns (address) {
         address _h = address(new Hyphae(_name));
@@ -29,10 +22,9 @@ contract Mycelium is Ownable {
         return _t;
     }
 
-    // needs to have an index
-    function mintToad(uint r, uint g, uint b) public {
+    function mintToad(uint8 r, uint8 g, uint8 b) public {
         Toadstool toad = Toadstool(toads[0]);
-        toad.mint(r,g,b);
+        toad.mint(r,g,b, msg.sender);
     }
 
     function setToad(uint8 _index, address _address) public {
